@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-import { fontFamily } from 'tailwindcss/defaultTheme'
 
 const config = {
   darkMode: ["class"],
@@ -11,16 +10,59 @@ const config = {
   ],
   prefix: "",
   theme: {
+    // container: {
+    //   center: true,
+    //   padding: "2rem",
+    //   screens: {
+    //     "2xl": "1400px",
+    //   },
+    // },
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      backgroundColor: {
+        'interval-purple': {
+          400: '#635985',
+          500: '#3F3B6C',
+          700: '#443C68',
+          800: '#393053',
+          900: '#18122B',
+        },
+        'interval-glory': {
+          900: '#091353',
+        },
+        amy: '#344955',
+        wuthering: {
+          800: '#19376D',
+          900: '#102C57',
+        },
+        speechless: '#070F2B',
+        genshin: {
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+        honkaiSTR: {
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        } 
+      },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        poppins: ["var(--font-poppins)"],
       },
       keyframes: {
         "accordion-down": {

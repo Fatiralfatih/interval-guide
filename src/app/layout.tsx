@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "~/lib/utils";
-
-const inter = Inter({ subsets: ["latin"], variable: '--font-sans' });
+import { poppins } from "~/lib/font";
+import { dataMockApiImages } from "~/lib/mockApi";
+import { Navbar } from "~/components/ui/Navbar";
 
 export const metadata: Metadata = {
-  title: "Interval Guide",
-  description: "haha",
+  title: "Genshin Impact | Interval Guide",
+  description: "guide for genshin impact",
+  icons: {
+    icon: dataMockApiImages.genshin.icon
+  }
 };
 
 export default function RootLayout({
@@ -17,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(`${inter.className} min-h-screen font-sans antialiased`)}>{children}</body>
+      <body className={cn(`${poppins.className} bg-interval-purple-900 min-h-screen antialiased text-white`)}>
+        <header className="">
+          <Navbar />
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
