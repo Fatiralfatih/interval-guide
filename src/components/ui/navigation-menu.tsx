@@ -4,7 +4,7 @@ import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 
-import { cn } from "~/lib/utils"
+import { cn } from "~/utils"
 import { LuChevronDown } from "react-icons/lu"
 
 const NavigationMenu = React.forwardRef<
@@ -43,13 +43,8 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex w-max items-center justify-center px-5 text-sm font-medium transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-zinc-100/50 data-[state=open]:bg-zinc-100/50 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50 dark:data-[active]:bg-zinc-800/50 dark:data-[state=open]:bg-zinc-800/50",
+  "group inline-flex w-max items-center justify-center px-5 text-sm font-medium transition-colors hover:bg-speechless hover:text-zinc-100 focus:bg-speechless focus:text-zinc-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-speechless/20 data-[state=open]:bg-speechless/50 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50 dark:data-[active]:bg-zinc-800/50 dark:data-[state=open]:bg-zinc-800/50",
 )
-
-const navigationMenuActive = () => {
-
-
-}
 
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
@@ -124,7 +119,6 @@ NavigationMenuIndicator.displayName =
 
 export {
   navigationMenuTriggerStyle,
-  navigationMenuActive,
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,

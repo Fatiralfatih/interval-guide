@@ -1,5 +1,15 @@
+import { Metadata } from "next";
 import Link from "next/link"
 import { Button } from "~/components/ui/button"
+import { dataMockApiImages } from "~/utils";
+
+export const metadata: Metadata = {
+    title: "Whutering Waves | Interval Guide",
+    description: "guide for genshin impact",
+    icons: {
+        icon: dataMockApiImages.whutering.icon
+    }
+};
 
 const page = () => {
     return (

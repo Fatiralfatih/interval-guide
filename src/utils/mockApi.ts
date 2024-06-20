@@ -30,7 +30,7 @@ const dataMockApis = {
     whutering: {
         name: 'whutering waves',
         images: dataMockApiImages.whutering
-    }
+    },
 }
 
 export {

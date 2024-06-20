@@ -10,13 +10,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    // container: {
-    //   center: true,
-    //   padding: "2rem",
-    //   screens: {
-    //     "2xl": "1400px",
-    //   },
-    // },
     container: {
       center: true,
       padding: {
@@ -31,7 +24,7 @@ const config = {
       },
     },
     extend: {
-      backgroundColor: {
+      colors: {
         'interval-purple': {
           400: '#635985',
           500: '#3F3B6C',
@@ -59,7 +52,12 @@ const config = {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-        } 
+        },
+        zenless: {
+          600: '#045757',
+          800: '#044343',
+          900: '#183D3D',
+        }
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
