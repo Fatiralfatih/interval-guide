@@ -1,7 +1,6 @@
 import {
     RarityTypes,
     TypePost,
-    WeaponsGeneral
 } from "~/utils"
 
 type GenshinElements = 'anemo' | 'cyro' | 'electro' | 'dendro' | 'geo' | 'hydro' | 'pyro'
@@ -27,8 +26,11 @@ type GenshinData = {
     id: number,
     hero: string,
     thumbnail: string,
-    element: GenshinElements,
+    link: string,
+    element: TypePost,
     role?: GenshinRole | GenshinRole[],
+    isNew?: boolean
+    rarity: RarityTypes
     // weapons?: WeaponsGeneral<GenshinWeapons>,
     // artefaks?: Artefaks,
     // materials?: TypePost,

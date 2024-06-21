@@ -6,3 +6,17 @@
 /* *{
   border: 1px white solid;
 } */
+
+.rarity-5 {
+  background-image: url('https://rerollcdn.com/STARRAIL/Rarity/5_sm.png') !important;
+  background-size: contain !important;
+  background-position: 50% !important;
+  order: -1;
+}
+
+.rarity-4 {
+  background-image: url('https://rerollcdn.com/STARRAIL/Rarity/4_sm.png') !important;
+  background-size: contain !important;
+  background-position: 50% !important;
+  order: -1;
+}

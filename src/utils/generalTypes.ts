@@ -3,7 +3,7 @@ type RarityTypes = 3 | 4 | 5
 type TypePost = {
     title: string,
     description?: string,
-    thumbnail?: string
+    thumbnail: string
 }
 
 interface WeaponsGeneral<T>  {

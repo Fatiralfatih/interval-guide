@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "~/utils";
-import { poppins } from "~/utils/font";
+import { poppins, roboto } from "~/utils/font";
 import { dataMockApiImages } from "~/utils/mockApi";
 import { Navbar } from "~/components/ui/Navbar";
 
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(`${poppins.className} bg-interval-purple-900 min-h-screen antialiased text-white`)}>
+      <body className={cn(`${roboto.className} bg-interval-purple-900 min-h-screen antialiased text-white`)}>
         <Navbar />
         {children}
       </body>

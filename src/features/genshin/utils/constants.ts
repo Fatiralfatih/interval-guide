@@ -1,4 +1,4 @@
-import { ListLinkType } from "~/utils"
+import { ListLinkType, TypePost } from "~/utils"
 
 
 const listLinksItemsGenshin: ListLinkType[] = [
@@ -108,4 +108,63 @@ const listLinksItemsGenshinWithDatabase = [
     }
 ]
 
-export { listLinksItemsGenshin, listLinksItemsGenshinWithDatabase }
+const listElements: TypePost[] = [
+    {
+        title: 'anemo',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_anemo.png',
+    },
+    {
+        title: 'cyro',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_cryo.png'
+    },
+    {
+        title: 'electro',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_electro.png'
+    },
+    {
+        title: 'dendro',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_dendro.png'
+    },
+    {
+        title: 'geo',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_geo.png',
+    },
+    {
+        title: 'hydro',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_hydro.png'
+    },
+    {
+        title: 'pyro',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_pyro.png',
+    }
+]
+
+const listWeapons: TypePost[] = [
+    {
+        title: 'bow',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/weapon_bow.png',
+    },
+    {
+        title: 'catalyst',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/weapon_catalyst.png'
+    },
+    {
+        title: 'claymore',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/weapon_claymore.png'
+    },
+    {
+        title: 'polearn',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/weapon_polearm.png'
+    },
+    {
+        title: 'sword',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/weapon_sword.png'
+    }
+]
+
+export {
+    listLinksItemsGenshin,
+    listLinksItemsGenshinWithDatabase,
+    listElements,
+    listWeapons
+}

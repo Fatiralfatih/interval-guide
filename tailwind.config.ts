@@ -13,8 +13,9 @@ const config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
+        DEFAULT: '0rem',
         sm: '2rem',
+        md: '200rem',
         lg: '4rem',
         xl: '5rem',
         '2xl': '6rem',
@@ -26,16 +27,19 @@ const config = {
     extend: {
       colors: {
         'interval-purple': {
-          400: '#635985',
-          500: '#3F3B6C',
-          700: '#443C68',
-          800: '#393053',
+          400: '#4d5fc4',
+          500: '#303b7a',
+          700: '#24285a',
+          800: '#1c1f46',
           900: '#18122B',
         },
         'interval-glory': {
           900: '#091353',
         },
         amy: '#344955',
+        success: {
+          700: '#009688'
+        },
         wuthering: {
           800: '#19376D',
           900: '#102C57',

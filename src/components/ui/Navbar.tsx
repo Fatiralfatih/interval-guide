@@ -57,7 +57,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
             <nav
                 ref={ref}
                 className={cn(
-                    "fixed rounded-lg top-0 left-0 right-0 py-4 px-4 w-full sm:px-6 lg:px-7 lg:py-0",
+                    "fixed rounded-lg top-0 left-0 right-0 z-50 py-4 px-4 w-full sm:px-6 lg:px-7 lg:py-0",
                     renderValueBeetwenPath({
                         whutering: 'bg-wuthering-900',
                         genshin: 'bg-genshin-900',
@@ -70,7 +70,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                 <section className={`lg:hidden ${className}`}>
                     <div className="flex justify-between w-full items-center">
                         <div className="flex items-center gap-5">
-                            <h1 className="text-xl font-bold">Interval.GG</h1>
+                            <h1 className="text-xl font-bold md:text-2xl">Interval.GG</h1>
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
@@ -85,12 +85,12 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                                             whutering: 'whutering-waves',
                                             zenless: 'zenless-zone-zero'
                                         })}`}
-                                        className="rounded-full aspect-auto"
+                                        className="rounded-full aspect-auto md:w-[30px]"
                                         width={25}
                                         height={25}
                                     />
                                 </figure>
-                                <h4 className="truncate w-32 capitalize font-medium">
+                                <h4 className="truncate w-32 capitalize font-medium text-[16px] md:text-lg">
                                     {renderValueBeetwenPath({
                                         genshin: 'genshin impact',
                                         honkaiSTR: 'honkai: star rail',
@@ -101,7 +101,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                             </div>
                         </div>
 
-                        <Drawer>
+                        <Drawer direction="right">
                             <DrawerTrigger asChild>
                                 <Button
                                     className="w-fit"
@@ -174,7 +174,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                 {/* navbar for website */}
                 <section className={`hidden lg:flex lg:flex-col ${className}`}>
                     <div className="flex gap-5">
-                        <h1 className="text-xl font-bold pt-2">Interval.GG</h1>
+                        <h1 className="text-xl font-bold pt-2 md:text-2xl">Interval.GG</h1>
                         <ul className="bg-speechless flex rounded-b-lg capitalize text-xs min-w-full lg:text-sm">
                             {/* genshin impact */}
                             <li className={`py-2 px-3 ${pathName === "/" ? 'bg-genshin-800 rounded-bl-lg' : 'hover:bg-interval-glory-900 rounded-bl-lg'} `}>

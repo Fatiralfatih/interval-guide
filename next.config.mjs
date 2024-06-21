@@ -6,7 +6,7 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'rerollcdn.com',
                 port: '',
-                pathname: '/GENSHIN/GameIcons/**'
+                pathname: '/GENSHIN/**'
             }
         ]
     }

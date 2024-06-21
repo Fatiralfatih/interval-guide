@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Roboto } from "next/font/google";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -7,4 +7,9 @@ const poppins = Poppins({
     variable: '--font-poppins'
 })
 
-export { poppins }
+const roboto = Roboto({
+    subsets: ["greek"],
+    weight: ["100", "300", "400", "500", "700", "900"],
+})
+
+export { poppins, roboto }
