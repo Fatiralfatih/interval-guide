@@ -31,7 +31,7 @@ import { listLinksItemsGenshinWithDatabase, listLinksItemsGenshin } from "~/feat
 //     }
 // )
 
-const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElement>>(({ className }, ref) => {
+const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => {
 
     const pathName = usePathname()
 
@@ -57,7 +57,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
             <nav
                 ref={ref}
                 className={cn(
-                    "fixed rounded-lg top-0 left-0 right-0 z-50 py-4 px-4 w-full sm:px-6 lg:px-7 lg:py-0",
+                    "fixed rounded-lg top-0 left-0 right-0 z-50 py-2 px-4 w-full sm:px-6 lg:px-7 lg:py-0",
                     renderValueBeetwenPath({
                         whutering: 'bg-wuthering-900',
                         genshin: 'bg-genshin-900',
@@ -65,6 +65,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                         zenless: 'bg-zenless-900',
                     })
                 )}
+                {...props}
             >
                 {/* navbar for mobile */}
                 <section className={`lg:hidden ${className}`}>
@@ -90,7 +91,7 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                                         height={25}
                                     />
                                 </figure>
-                                <h4 className="truncate w-32 capitalize font-medium text-[16px] md:text-lg">
+                                <h4 className="truncate w-32 capitalize font-medium text-sm md:text-[16px] md:text-lg">
                                     {renderValueBeetwenPath({
                                         genshin: 'genshin impact',
                                         honkaiSTR: 'honkai: star rail',
@@ -105,13 +106,13 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                             <DrawerTrigger asChild>
                                 <Button
                                     className="w-fit"
-                                    variant={"ghost"}
+                                    variant={"interval-purple"}
                                     size={'icon'}
                                 >
                                     <IoMenu className="text-3xl" />
                                 </Button>
                             </DrawerTrigger>
-                            <DrawerContent className="top-16 lg:hidden">
+                            <DrawerContent className="top-14 lg:hidden">
                                 <div className="overflow-auto w-full h-screen bg-indigo-950 pb-8">
                                     <DrawerHeader className="pt-0 pb-0">
                                         {listLinksItemsGenshin.map(item => (
@@ -256,7 +257,12 @@ const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElemen
                                                         honkaiSTR: 'hover:bg-honkaiSTR-800',
                                                         zenless: 'hover:bg-zenless-600',
                                                         whutering: 'hover:bg-interval-glory-900/50'
-                                                    })
+                                                    }),
+                                                    pathName === "/" && item.id === 1 ? 'bg-genshin-800' : '',
+                                                    pathName === "/build" && item.id === 2 ? 'bg-genshin-800' : '',
+                                                    pathName === "/teams" && item.id === 3 ? 'bg-genshin-800' : '',
+                                                    pathName === "/tier-list" && item.id === 4 ? 'bg-genshin-800' : '',
+                                                    pathName === "/farming-guide" && item.id === 5 ? 'bg-genshin-800' : '',
                                                 )}
                                             >
                                                 <NavigationMenuItem className="lg:text-[17px] lg:font-light">

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "~/utils";
-import { poppins, roboto } from "~/utils/font";
+import { roboto } from "~/utils/font";
 import { dataMockApiImages } from "~/utils/mockApi";
 import { Navbar } from "~/components/ui/Navbar";
+import { Footer } from "~/components/ui/Footer";
 
 export const metadata: Metadata = {
   title: "Genshin Impact | Interval Guide",
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(`${roboto.className} bg-interval-purple-900 min-h-screen antialiased text-white`)}>
         <Navbar />
+
         {children}
+
+        <Footer />
       </body>
     </html>
   );

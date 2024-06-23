@@ -143,17 +143,17 @@ const HomePage = () => {
         {/* characters list */}
         <section className="pt-6">
           <Card>
-            <CardContent className="flex flex-wrap items-start p-6 gap-5 md:gap-x-10 md:gap-y-8 lg:px-8 lg:py-6 lg:gap-x-[43px]">
+            <CardContent className="flex flex-wrap items-start px-3 pb-0 pt-6 md:p-5 lg:py-6">
               {genshinData.map(genshin => (
                 <Link
                   key={genshin.id}
                   href={'#'}
-                  className="relative flex flex-col items-center rounded-sm"
+                  className="relative flex flex-col items-center rounded-sm group px-[10px] py-4 md:px-4 xl:px-5"
                 >
                   <Image
                     src={genshin.thumbnail}
                     className={cn(
-                      "rounded-[4px] aspect-auto w-[60px] min-h-[50px] md:w-[70px]",
+                      "rounded-[4px] aspect-auto w-[60px] min-h-[50px] md:w-[70px] transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300",
                       genshin.rarity === 4 && 'rarity-4',
                       genshin.rarity === 5 && 'rarity-5',
                     )}
@@ -163,18 +163,21 @@ const HomePage = () => {
                   />
                   <Image
                     src={String(genshin.element.thumbnail)}
-                    className="bg-interval-purple-500 rounded-[50%] absolute -top-2 -right-2"
+                    className="bg-interval-purple-500 rounded-[50%] absolute w-[20px] md:w-[24px] top-2 right-0 xl:right-2"
                     alt="element"
                     width={24}
                     height={24}
                   />
-                  <p className="text-sm pt-3 capitalize truncate max-w-[50px] md:max-w-[70px]">{genshin.hero}</p>
+                  <p
+                    className="text-sm pt-2 capitalize truncate max-w-[50px] md:max-w-[70px]">{genshin.hero}
+                  </p>
                   {genshin.isNew && <Badge variant={'interval'} className="mt-1">New</Badge>}
                 </Link>
               ))}
             </CardContent>
           </Card>
         </section>
+        
       </div>
     </main>
   );

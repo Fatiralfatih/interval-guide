@@ -58,7 +58,7 @@ const listLinksItemsGenshinWithDatabase = [
     {
         id: 1,
         title: 'Characters',
-        link: '/characters'
+        link: '/'
     },
     {
         id: 2,

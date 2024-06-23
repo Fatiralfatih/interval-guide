@@ -705,6 +705,141 @@ const genshinData: GenshinData[] = [
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Lynette.png',
         rarity: 4
     },
+    {
+        id: 73,
+        hero: 'mika',
+        link: '/characters/mika',
+        element: genshinElements.cyro,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Mika.png',
+        rarity: 4
+    },
+    {
+        id: 74,
+        hero: 'ningguang',
+        link: '/characters/ningguang',
+        element: genshinElements.geo,
+        role: 'mainDps',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Ningguang.png',
+        rarity: 4
+    },
+    {
+        id: 75,
+        hero: 'noelle',
+        link: '/characters/noelle',
+        element: genshinElements.geo,
+        role: 'mainDps',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Noelle.png',
+        rarity: 4
+    },
+    {
+        id: 76,
+        hero: 'razor',
+        link: '/characters/razor',
+        element: genshinElements.electro,
+        role: 'mainDps',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Razor.png',
+        rarity: 4
+    },
+    {
+        id: 77,
+        hero: 'rosaria',
+        link: '/characters/rosaria',
+        element: genshinElements.cyro,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Rosaria.png',
+        rarity: 4
+    },
+    {
+        id: 78,
+        hero: 'sara',
+        link: '/characters/sara',
+        element: genshinElements.electro,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sara.png',
+        rarity: 4
+    },
+    {
+        id: 79,
+        hero: 'sayu',
+        link: '/characters/sayu',
+        element: genshinElements.anemo,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sayu.png',
+        rarity: 4
+    },
+    {
+        id: 80,
+        hero: 'sucrose',
+        link: '/characters/sucrose',
+        element: genshinElements.anemo,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sucrose.png',
+        rarity: 4
+    },
+    {
+        id: 81,
+        hero: 'thoma',
+        link: '/characters/thoma',
+        element: genshinElements.pyro,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Thoma.png',
+        rarity: 4
+    },
+    {
+        id: 82,
+        hero: 'xiangling',
+        link: '/characters/xiangling',
+        element: genshinElements.pyro,
+        role: 'subDps',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xiangling.png',
+        rarity: 4
+    },
+    {
+        id: 83,
+        hero: 'xingqiu',
+        link: '/characters/xingqiu',
+        element: genshinElements.hydro,
+        role: 'subDps',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xingqiu.png',
+        rarity: 4
+    },
+    {
+        id: 84,
+        hero: 'xinyan',
+        link: '/characters/xinyan',
+        element: genshinElements.pyro,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xinyan.png',
+        rarity: 4
+    },
+    {
+        id: 85,
+        hero: 'yanfei',
+        link: '/characters/yanfei',
+        element: genshinElements.pyro,
+        role: 'mainDps',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yanfei.png',
+        rarity: 4
+    },
+    {
+        id: 86,
+        hero: 'yaoyao',
+        link: '/characters/yaoyao',
+        element: genshinElements.dendro,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yaoyao.png',
+        rarity: 4
+    },
+    {
+        id: 87,
+        hero: 'yun jin',
+        link: '/characters/yun-jin',
+        element: genshinElements.geo,
+        role: 'support',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yun%20Jin.png',
+        rarity: 4
+    },
 ]
 
 export {
