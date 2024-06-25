@@ -11,6 +11,8 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 import { usePathname } from "next/navigation"
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "./drawer"
 import { listLinksItemsGenshinWithDatabase, listLinksItemsGenshin } from "~/features/genshin/utils/constants"
+import { genshinData } from "~/features/genshin/utils"
+import { GenshinData } from "~/features/genshin/types/dataTypes"
 
 // type NavbarProps = VariantProps<typeof navbarVariants> & React.HtmlHTMLAttributes<HTMLDivElement>
 
@@ -31,7 +33,9 @@ import { listLinksItemsGenshinWithDatabase, listLinksItemsGenshin } from "~/feat
 //     }
 // )
 
-const Navbar = forwardRef<HTMLDivElement, React.HtmlHTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => {
+interface NavbarProps extends React.HtmlHTMLAttributes<HTMLElement> {}
+
+const Navbar = forwardRef<HTMLDivElement, NavbarProps>(({ className, ...props }, ref) => {
 
     const pathName = usePathname()
 
