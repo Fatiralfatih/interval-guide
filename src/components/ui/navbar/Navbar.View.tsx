@@ -168,7 +168,7 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                         {/* whutering waves */}
                                         {pathName !== '/whutering-waves' && (
                                             <Link href={'/whutering-waves'}>
-                                                <div className="flex gap-2 justify-center items-center py-3 hover:bg-interval-purple-900 border-b-[0.1px] rounded-sm border-b-white/20 rounded-sm transition-all ease-in-out duration-300">
+                                                <div className="flex gap-2 justify-center items-center py-3 hover:bg-interval-purple-900 border-b-[0.1px] rounded-sm border-b-white/20 transition-all ease-in-out duration-300">
                                                     <Image
                                                         className="rounded-full md:w-7"
                                                         src={dataMockApiImages.whutering.icon}
