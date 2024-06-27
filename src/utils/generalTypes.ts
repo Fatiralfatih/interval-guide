@@ -6,7 +6,7 @@ type TypePost = {
     thumbnail: string
 }
 
-interface WeaponsGeneral<T>  {
+interface WeaponsGeneral<T> {
     type: T,
     signature?: string,
     bestWeapons?: string | TypePost[]
@@ -16,7 +16,8 @@ interface WeaponsGeneral<T>  {
 interface ListLinkType {
     id: number;
     title: string;
-    link: string;
+    link?: string;
+    children?: ListLinkType[],
 }
 
 export type {

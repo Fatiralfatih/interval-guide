@@ -1,7 +1,7 @@
 import { ListLinkType, TypePost } from "~/utils"
 
 
-const listLinksItemsGenshin: ListLinkType[] = [
+const listLinksItemsGenshinMobile: ListLinkType[] = [
     {
         id: 1,
         title: 'Characters',
@@ -54,7 +54,7 @@ const listLinksItemsGenshin: ListLinkType[] = [
     }
 ]
 
-const listLinksItemsGenshinWithDatabase = [
+const listLinksItemsGenshin = [
     {
         id: 1,
         title: 'Characters',
@@ -163,8 +163,8 @@ const listWeapons: TypePost[] = [
 ]
 
 export {
+    listLinksItemsGenshinMobile,
     listLinksItemsGenshin,
-    listLinksItemsGenshinWithDatabase,
     listElements,
     listWeapons
 }

@@ -177,7 +177,7 @@ const HomePage = () => {
             </CardContent>
           </Card>
         </section>
-        
+
       </div>
     </main>
   );
