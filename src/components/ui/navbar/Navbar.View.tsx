@@ -27,7 +27,7 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
         <header>
             <nav
                 className={cn(
-                    "fixed rounded-lg top-0 py-2 px-4 w-full sm:px-6 lg:px-7 lg:py-0",
+                    "fixed rounded-lg top-0 py-2 px-4 z-10 w-full sm:px-6 lg:px-7 lg:py-0",
                     renderValueBeetwenPath({
                         whutering: 'bg-wuthering-900',
                         genshin: 'bg-genshin-900',
