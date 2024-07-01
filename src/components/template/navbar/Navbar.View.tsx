@@ -43,12 +43,12 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
-                                        src={String(renderValueBeetwenPath({
+                                        src={renderValueBeetwenPath({
                                             genshin: dataMockApiImages.genshin.icon,
                                             honkaiSTR: dataMockApiImages.honkaiSTR.icon,
                                             whutering: dataMockApiImages.whutering.icon,
                                             zenless: dataMockApiImages.zenlessZoneZero.icon,
-                                        }))}
+                                        })}
                                         alt={`logo-${renderValueBeetwenPath({
                                             genshin: 'genshin-impact',
                                             honkaiSTR: 'honkai-star-rail',
