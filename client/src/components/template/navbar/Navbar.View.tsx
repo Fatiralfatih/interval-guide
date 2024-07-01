@@ -1,15 +1,13 @@
 import Image from "next/image"
 import { cn, dataMockApiImages, ListLinkType } from "~/utils"
-import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "../drawer"
-import { Button } from "../button"
 import { IoClose, IoMenu } from "react-icons/io5"
 import { listLinksItemsGenshin, listLinksItemsGenshinMobile } from "~/features/genshin"
 import Link from "next/link"
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "../navigation-menu"
 import { Fragment } from "react"
 import { listLinkItemsHonkai, listLinkItemsHonkaiMobile } from "~/features/honkaiSTR"
 import { listLinkItemsWhutering } from "~/features/whuteringWaves"
 import { listLinkItemsZenless, listLinkItemsZenlessMobile } from "~/features/zenlessZoneZero"
+import { Button, Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui"
 
 interface NavbarViewProps {
     renderValueBeetwenPath: (value: {
@@ -17,7 +15,7 @@ interface NavbarViewProps {
         genshin: string | Array<ListLinkType>,
         honkaiSTR: string | Array<ListLinkType>,
         zenless: string | Array<ListLinkType>,
-    }) => string & Array<ListLinkType & undefined>,
+    }) => string & Array<ListLinkType>,
     pathName: string;
 }
 

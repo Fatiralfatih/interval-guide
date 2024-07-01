@@ -9,7 +9,7 @@ const Navbar = () => {
   const pathName = usePathname()
 
   const renderValueBeetwenPath = (value: {
-    whutering: string | Array<ListLinkType>,
+    whutering?: string | Array<ListLinkType>,
     genshin: string | Array<ListLinkType>,
     honkaiSTR: string | Array<ListLinkType>,
     zenless: string | Array<ListLinkType>

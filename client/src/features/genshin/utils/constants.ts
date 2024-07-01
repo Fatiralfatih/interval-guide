@@ -108,7 +108,7 @@ const listLinksItemsGenshin = [
     }
 ]
 
-const listElements: TypePost[] = [
+const listElementsGenshin: TypePost[] = [
     {
         title: 'anemo',
         thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_anemo.png',
@@ -139,7 +139,7 @@ const listElements: TypePost[] = [
     }
 ]
 
-const listWeapons: TypePost[] = [
+const listWeaponsGenshin: TypePost[] = [
     {
         title: 'bow',
         thumbnail: 'https://rerollcdn.com/GENSHIN/UI/weapon_bow.png',
@@ -162,9 +162,21 @@ const listWeapons: TypePost[] = [
     }
 ]
 
+const listStarsGenshin: TypePost[] = [
+    {
+        title: '4 Star',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/rarity_4.png'
+    },
+    {
+        title: '5 Star',
+        thumbnail: 'https://rerollcdn.com/GENSHIN/UI/rarity_5.png'
+    }
+]
+
 export {
     listLinksItemsGenshinMobile,
     listLinksItemsGenshin,
-    listElements,
-    listWeapons
+    listElementsGenshin,
+    listWeaponsGenshin,
+    listStarsGenshin
 }

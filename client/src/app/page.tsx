@@ -1,7 +1,6 @@
 import { LuSearch } from "react-icons/lu";
 import { Badge, Button, Card, CardContent, Input, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "~/components/ui";
-import { FaStar } from "react-icons/fa";
-import { genshinData, listElements, listWeapons } from "~/features/genshin/utils";
+import { genshinData, listElementsGenshin, listStarsGenshin, listWeaponsGenshin } from "~/features/genshin/utils";
 import Image from "next/image";
 import { cn } from "~/utils";
 import Link from "next/link";
@@ -31,48 +30,46 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* list all alala */}
+          {/* list all lala */}
           <div className="bg-interval-purple-500 flex flex-col justify-center items-center px-4 rounded-md md:flex-row md:pe-2">
             <TooltipProvider>
               {/* star */}
-              <ul className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:pe-3 md:py-1">
-                <li className="rounded-sm">
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        variant={'interval-purple'}
-                        size={'sm'}
-                        className="h-10 "
-                      >
-                        <FaStar className="text-xl text-pink-400 md:text-2xl" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      4 Star
-                    </TooltipContent>
-                  </Tooltip>
-                </li>
-                <li className=" md:border-r md:border-r-interval-purple-400 md:pe-4">
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        variant={'interval-purple'}
-                        size={'sm'}
-                        className="h-10 "
-                      >
-                        <FaStar className="text-xl text-yellow-500 md:text-2xl" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      5 Star
-                    </TooltipContent>
-                  </Tooltip>
-                </li>
-              </ul>
-
+              <div className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:pe-3 md:py-1">
+                <ul className="flex md:border-r md:border-r-interval-purple-400">
+                  {listStarsGenshin.map((star) => (
+                    <li
+                      className={cn(
+                        "rounded-sm",
+                        // 'asd' ? 'md:border-r md:border-r-interval-purple-400 md:pe-4' : 'md: border-none'
+                      )}
+                      key={star.title}
+                    >
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <figure
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-zinc-950 dark:focus-visible:ring-zinc-300
+                          h-9 px-[7px] bg-interval-purple-600 text-zinc-50 hover:bg-interval-purple-400 cursor-pointer"
+                          >
+                            <Image
+                              src={star.thumbnail}
+                              alt={star.title}
+                              className="md:w-[30px] aspect-auto"
+                              width={25}
+                              height={25}
+                            />
+                          </figure>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          {star.title}
+                        </TooltipContent>
+                      </Tooltip>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               {/* elements */}
               <ul className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:px-1 md:py-1">
-                {listElements.map(element => (
+                {listElementsGenshin.map(element => (
                   <li
                     className={cn(
                       // for border right
@@ -106,7 +103,7 @@ const HomePage = () => {
 
               {/* weapons */}
               <ul className="flex py-3 w-full justify-center items-center md:w-fit md:border-b-0 md:px-2 md:py-1">
-                {listWeapons.map(weapon => (
+                {listWeaponsGenshin.map(weapon => (
                   <li
                     key={weapon.title}
                     className="rounded-sm"
