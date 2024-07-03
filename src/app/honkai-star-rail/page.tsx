@@ -1,11 +1,12 @@
 import { Metadata } from "next";
-import Link from "next/link"
-import { Button } from "~/components/ui/button"
+import { CharacterList, HeaderApp } from "~/components/template";
+import { genshinData } from "~/features/genshin";
+import { listElementsHonkai, listStarsHonkai, listWeaponsHonkai } from "~/features/honkaiSTR";
 import { dataMockApiImages } from "~/utils";
 
 export const metadata: Metadata = {
     title: "Honkai Star Rail | Interval Guide",
-    description: "guide for genshin impact",
+    description: "guide for honkai star rail",
     icons: {
         icon: dataMockApiImages.honkaiSTR.icon
     }
@@ -13,18 +14,20 @@ export const metadata: Metadata = {
 
 const Page = () => {
     return (
-        <div className="pt-32 space-x-4">
-            <Link href={'/'}>
-                <Button>
-                    Goto genshin
-                </Button>
-            </Link>
-            <Link href={'/whutering'}>
-                <Button>
-                    Goto whutering
-                </Button>
-            </Link>
-        </div>
+        <>
+            {/* header app */}
+            <HeaderApp
+                titleHeader="Honkai: Star Rail"
+                listElements={listElementsHonkai}
+                listStars={listStarsHonkai}
+                listWeapons={listWeaponsHonkai}
+            />
+
+            {/* characters list */}
+            <CharacterList
+                data={genshinData}
+            />
+        </>
     )
 }
 

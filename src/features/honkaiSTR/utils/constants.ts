@@ -1,4 +1,5 @@
-import { ListLinkType } from "~/utils";
+import { ListLinkType, TypePost } from "~/utils";
+import { honkaiElements, honkaiStars, honkaiWeapons } from "./mockApi";
 
 const listLinkItemsHonkai: ListLinkType[] = [
     {
@@ -92,7 +93,62 @@ const listLinkItemsHonkaiMobile: ListLinkType[] = [
     }
 ]
 
+const listStarsHonkai: TypePost[] = [
+    {
+        title: honkaiStars[4].title,
+        thumbnail: honkaiStars[4].thumbnail,
+    },
+    {
+        title: honkaiStars[5].title,
+        thumbnail: honkaiStars[5].thumbnail
+    }
+]
+
+const listElementsHonkai: TypePost[] = [
+    {
+        title: honkaiElements.fire.title,
+        thumbnail: honkaiElements.fire.thumbnail
+    },
+    {
+        title: honkaiElements.ice.title,
+        thumbnail: honkaiElements.ice.thumbnail,
+    },
+    {
+        title: honkaiElements.imaginary.title,
+        thumbnail: honkaiElements.imaginary.thumbnail,
+    },
+    {
+        title: honkaiElements.lightning.title,
+        thumbnail: honkaiElements.lightning.thumbnail,
+    },
+    {
+        title: honkaiElements.physical.title,
+        thumbnail: honkaiElements.physical.thumbnail,
+    },
+    {
+        title: honkaiElements.quantum.title,
+        thumbnail: honkaiElements.quantum.thumbnail
+    },
+    {
+        title: honkaiElements.wind.title,
+        thumbnail: honkaiElements.wind.thumbnail,
+    }
+]
+
+const listWeaponsHonkai: TypePost[] = [
+    honkaiWeapons.abundance,
+    honkaiWeapons.destruction,
+    honkaiWeapons.erudition,
+    honkaiWeapons.harmony,
+    honkaiWeapons.hunt,
+    honkaiWeapons.nihility,
+    honkaiWeapons.preservation,
+]
+
 export {
     listLinkItemsHonkai,
-    listLinkItemsHonkaiMobile
+    listLinkItemsHonkaiMobile,
+    listStarsHonkai,
+    listElementsHonkai,
+    listWeaponsHonkai,
 }

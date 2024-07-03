@@ -11,4 +11,4 @@ const CharacterList = ({ data }: CharacterListProps) => {
     )
 }
 
-export default CharacterList
+export { CharacterList }

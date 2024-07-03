@@ -31,7 +31,7 @@ const View = ({ titleHeader, listElements, listStars, listWeapons }: HeaderAppPr
                 <TooltipProvider>
                     {/* star */}
                     <div className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:pe-3 md:py-1">
-                        <ul className="flex md:border-r md:border-r-interval-purple-400">
+                        <ul className="flex md:border-r md:border-r-interval-purple-400 px-2">
                             {listStars.map((star) => (
                                 <li
                                     className={cn(
@@ -65,41 +65,39 @@ const View = ({ titleHeader, listElements, listStars, listWeapons }: HeaderAppPr
                     </div>
 
                     {/* elements */}
-                    <ul className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:px-1 md:py-1">
-                        {listElements.map(element => (
-                            <li
-                                className={cn(
-                                    // for border right
-                                    element.title === "pyro" && 'md:border-r md:pe-3 md:border-r-interval-purple-400'
-                                )}
-                                key={element.title}
-                            >
-                                <Tooltip>
-                                    <TooltipTrigger asChild>
-                                        <Button
-                                            variant={'interval-purple'}
-                                            size={'sm'}
-                                            className="h-10"
-                                        >
-                                            <Image
-                                                src={String(element.thumbnail)}
-                                                alt={'thumbnail' + element.title}
-                                                className="md:w-[30px] aspect-auto"
-                                                width={25}
-                                                height={25}
-                                            />
-                                        </Button>
-                                    </TooltipTrigger>
-                                    <TooltipContent className="capitalize">
-                                        {element.title}
-                                    </TooltipContent>
-                                </Tooltip>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:pe-3 md:py-1">
+                        <ul className="flex md:border-r md:border-r-interval-purple-400 px-2">
+                            {listElements.map(element => (
+                                <li
+                                    key={element.title}
+                                >
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <Button
+                                                variant={'interval-purple'}
+                                                size={'sm'}
+                                                className="h-10"
+                                            >
+                                                <Image
+                                                    src={String(element.thumbnail)}
+                                                    alt={'thumbnail' + element.title}
+                                                    className="md:w-[30px] aspect-auto"
+                                                    width={25}
+                                                    height={25}
+                                                />
+                                            </Button>
+                                        </TooltipTrigger>
+                                        <TooltipContent className="capitalize">
+                                            {element.title}
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
                     {/* weapons */}
-                    <ul className="flex py-3 w-full justify-center items-center md:w-fit md:border-b-0 md:px-2 md:py-1">
+                    <ul className="flex py-3 w-full justify-center items-center md:w-fit md:border-b-0 md:px-0 md:py-1">
                         {listWeapons.map(weapon => (
                             <li
                                 key={weapon.title}
