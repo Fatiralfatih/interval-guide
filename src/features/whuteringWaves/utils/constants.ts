@@ -1,4 +1,5 @@
-import { ListLinkType } from "~/utils";
+import { ListLinkType, TypePost } from "~/utils";
+import { elementsWhutering, weaponsWhutering } from "./mockApi";
 
 const listLinkItemsWhutering: ListLinkType[] = [
     {
@@ -38,4 +39,25 @@ const listLinkItemsWhutering: ListLinkType[] = [
     }
 ]
 
-export { listLinkItemsWhutering }
+const listElementsWhutering: TypePost[] = [
+    elementsWhutering.aero,
+    elementsWhutering.electro,
+    elementsWhutering.fusion,
+    elementsWhutering.glacio,
+    elementsWhutering.havoc,
+    elementsWhutering.spectro,
+]
+
+const listWeaponsWhutering: TypePost[] = [
+    weaponsWhutering.broadBlade,
+    weaponsWhutering.gauntlets,
+    weaponsWhutering.pistols,
+    weaponsWhutering.rectifier,
+    weaponsWhutering.sword,
+]
+
+export {
+    listLinkItemsWhutering,
+    listElementsWhutering,
+    listWeaponsWhutering,
+}

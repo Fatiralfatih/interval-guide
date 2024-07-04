@@ -6,10 +6,12 @@ export interface HeaderAppProps {
     listElements: TypePost[]
     listStars: TypePost[]
     listWeapons: TypePost[];
+    descriptionHeader?: string
 }
 
-const HeaderApp = ({ titleHeader, listElements, listStars, listWeapons }: HeaderAppProps) => {
+const HeaderApp = ({ titleHeader, listElements, listStars, listWeapons, descriptionHeader }: HeaderAppProps) => {
     return <View
+        descriptionHeader={descriptionHeader}
         listElements={listElements}
         titleHeader={titleHeader}
         listStars={listStars}

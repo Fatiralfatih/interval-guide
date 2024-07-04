@@ -1,19 +1,24 @@
 import Image from "next/image"
 import { LuSearch } from "react-icons/lu"
 import { Button, Input, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "~/components/ui"
-import { listStarsGenshin, listWeaponsGenshin } from "~/features/genshin"
 import { cn } from "~/utils"
 import type { HeaderAppProps } from "./HeaderApp"
 
-const View = ({ titleHeader, listElements, listStars, listWeapons }: HeaderAppProps) => {
+const View = ({ titleHeader, listElements, listStars, listWeapons, descriptionHeader }: HeaderAppProps) => {
     return (
         <section className="space-y-6">
-            <div className="flex flex-col gap-6 lg:items-center lg:flex-row lg:justify-between">
-                <h1
-                    className="text-[22px] leading-none font-medium lg:text-2xl"
-                >
-                    {titleHeader} Characters List
-                </h1>
+            <div className="flex flex-col gap-6  lg:flex-row lg:justify-between">
+                <div className="flex flex-col gap-2">
+                    <h1
+                        className="text-[22px] leading-none font-medium lg:text-2xl"
+                    >
+                        {titleHeader} Characters List
+                    </h1>
+                    {descriptionHeader &&
+                        <p className="font-light text-gray-300 text-base">{descriptionHeader}</p>
+                    }
+
+                </div>
                 <div className="w-full lg:w-fit">
                     <div className="relative flex-1 ">
                         <LuSearch className="absolute left-4 top-3 h-4 w-4" />
