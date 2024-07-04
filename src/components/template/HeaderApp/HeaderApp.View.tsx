@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { LuSearch } from "react-icons/lu"
 import { Button, Input, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "~/components/ui"
-import { listStarsGenshin, listWeaponsGenshin } from "~/features/genshin"
 import { cn } from "~/utils"
 import type { HeaderAppProps } from "./HeaderApp"
 
