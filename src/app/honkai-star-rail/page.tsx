@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { CharacterList, HeaderApp } from "~/components/template";
-import { listElementsHonkai, listStarsHonkai, listWeaponsHonkai } from "~/features/honkaiSTR";
+import { honkaiData, listElementsHonkai, listStarsHonkai, listWeaponsHonkai } from "~/features/honkaiSTR/utils";
 import { dataMockApiImages } from "~/utils";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ const Page = () => {
 
             {/* characters list */}
             <CharacterList
-                data={honkaiData}
+                data={genshinData}
             />
         </>
     )
