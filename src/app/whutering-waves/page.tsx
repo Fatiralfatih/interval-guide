@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { HeaderApp } from "~/components/template";
+import { CharacterList, HeaderApp } from "~/components/template";
 import { listStarsGenshin } from "~/features/genshin";
-import { listElementsWhutering, listWeaponsWhutering } from "~/features/whuteringWaves";
+import { listElementsWhutering, listWeaponsWhutering, whuteringData } from "~/features/whuteringWaves";
 import { dataMockApiImages } from "~/utils";
 
 export const metadata: Metadata = {
@@ -17,9 +17,14 @@ const page = () => {
         <>
             <HeaderApp
                 titleHeader="Whutering Waves"
+                descriptionHeader="A list of all playable characters in Wuthering Waves."
                 listStars={listStarsGenshin}
                 listElements={listElementsWhutering}
                 listWeapons={listWeaponsWhutering}
+            />
+
+            <CharacterList
+                data={whuteringData}
             />
         </>
     )

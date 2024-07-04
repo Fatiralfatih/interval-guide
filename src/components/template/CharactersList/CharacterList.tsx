@@ -1,8 +1,10 @@
 import { GenshinData } from '~/features/genshin'
 import { View } from './CharacterList.View'
+import { HonkaiType } from '~/features/honkaiSTR/types'
+import { WhuteringType } from '~/features/whuteringWaves'
 
 export interface CharacterListProps {
-    data: GenshinData[]
+    data: GenshinData[] & HonkaiType[] & WhuteringType[]
 }
 
 const CharacterList = ({ data }: CharacterListProps) => {
