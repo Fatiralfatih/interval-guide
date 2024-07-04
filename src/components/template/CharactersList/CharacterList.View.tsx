@@ -5,6 +5,7 @@ import { cn } from "~/utils"
 import { CharacterListProps } from "./CharacterList"
 
 const View = ({ data }: CharacterListProps) => {
+
     return (
         <section className="pt-6">
             <Card>
@@ -28,11 +29,20 @@ const View = ({ data }: CharacterListProps) => {
                             />
                             <Image
                                 src={String(item.element.thumbnail)}
-                                className="bg-interval-purple-500 rounded-[50%] absolute w-[20px] md:w-[24px] top-2 right-0 xl:right-2"
+                                className="bg-interval-purple-500 rounded-[50%] absolute w-[20px] md:w-[24px] top-2 right-0 xl:right-2 aspect-auto"
                                 alt="element"
                                 width={24}
                                 height={24}
                             />
+                            {item?.role?.thumbnail && (
+                                <Image
+                                    src={String(item?.role?.thumbnail)}
+                                    className="bg-interval-purple-500 rounded-[50%] absolute w-[23px] md:w-[25px] top-2 left-0 xl:left-2 aspect-auto"
+                                    alt="element"
+                                    width={25}
+                                    height={25}
+                                />
+                            )}
                             <p
                                 className="text-sm pt-2 capitalize truncate max-w-[50px] md:max-w-[70px]">{item.hero}
                             </p>

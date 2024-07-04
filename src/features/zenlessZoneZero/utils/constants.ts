@@ -1,4 +1,5 @@
-import { ListLinkType } from "~/utils";
+import { ListLinkType, TypePost } from "~/utils";
+import { elementsZenless, rolesZenless, starsZenless, weaponsZenless } from "./mockApi";
 
 const listLinkItemsZenless: ListLinkType[] = [
     {
@@ -82,8 +83,41 @@ const listLinkItemsZenlessMobile: ListLinkType[] = [
     }
 ]
 
+const listStarsZenless: TypePost[] = [
+    starsZenless.A,
+    starsZenless.S,
+]
+
+const listElementsZenless: TypePost[] = [
+    elementsZenless.electric,
+    elementsZenless.ether,
+    elementsZenless.fire,
+    elementsZenless.ice,
+    elementsZenless.physical,
+]
+
+const listWeaponsZenless: TypePost[] = [
+    weaponsZenless.victoria,
+    weaponsZenless.belobog,
+    weaponsZenless.section,
+    weaponsZenless.cunning,
+    weaponsZenless.obols,
+]
+
+const listRolesZenless: TypePost[] = [
+    rolesZenless.anomaly,
+    rolesZenless.attack,
+    rolesZenless.defense,
+    rolesZenless.stun,
+    rolesZenless.support,
+]
+
 
 export {
     listLinkItemsZenlessMobile,
-    listLinkItemsZenless
+    listLinkItemsZenless,
+    listStarsZenless,
+    listElementsZenless,
+    listWeaponsZenless,
+    listRolesZenless
 }
