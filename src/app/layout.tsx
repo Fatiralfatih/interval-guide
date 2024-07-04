@@ -4,7 +4,6 @@ import { cn } from "~/utils";
 import { roboto } from "~/utils/font";
 import { dataMockApiImages } from "~/utils/mockApi";
 import { Footer } from "~/components/ui/Footer";
-import { listLinksItemsGenshinMobile } from "~/features/genshin";
 import { Navbar } from "~/components/template";
 
 export const metadata: Metadata = {
