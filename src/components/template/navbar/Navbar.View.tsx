@@ -20,7 +20,6 @@ interface NavbarViewProps {
 }
 
 const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
-
     return (
         <header>
             <nav
