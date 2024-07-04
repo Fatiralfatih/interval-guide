@@ -24,7 +24,7 @@ const Page = () => {
 
             {/* characters list */}
             <CharacterList
-                data={genshinData}
+                data={honkaiData}
             />
         </>
     )
