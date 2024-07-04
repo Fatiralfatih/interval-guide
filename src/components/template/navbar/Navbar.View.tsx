@@ -4,7 +4,7 @@ import { IoClose, IoMenu } from "react-icons/io5"
 import { listLinksItemsGenshin, listLinksItemsGenshinMobile } from "~/features/genshin"
 import Link from "next/link"
 import { Fragment } from "react"
-import { listLinkItemsHonkai, listLinkItemsHonkaiMobile } from "~/features/honkaiSTR"
+import { listLinkItemsHonkai, listLinkItemsHonkaiMobile } from "~/features/honkaiSTR/utils"
 import { listLinkItemsWhutering } from "~/features/whuteringWaves"
 import { listLinkItemsZenless, listLinkItemsZenlessMobile } from "~/features/zenlessZoneZero"
 import { Button, Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui"
@@ -43,12 +43,12 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
-                                        src={String(renderValueBeetwenPath({
+                                        src={renderValueBeetwenPath({
                                             genshin: dataMockApiImages.genshin.icon,
                                             honkaiSTR: dataMockApiImages.honkaiSTR.icon,
                                             whutering: dataMockApiImages.whutering.icon,
                                             zenless: dataMockApiImages.zenlessZoneZero.icon,
-                                        }))}
+                                        })}
                                         alt={`logo-${renderValueBeetwenPath({
                                             genshin: 'genshin-impact',
                                             honkaiSTR: 'honkai-star-rail',
@@ -343,7 +343,7 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                     </div>
                 </section>
             </nav>
-        </header >
+        </header>
     )
 }
 
