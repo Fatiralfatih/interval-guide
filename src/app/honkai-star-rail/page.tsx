@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { CharacterList, HeaderApp } from "~/components/template";
-import { honkaiData, listElementsHonkai, listStarsHonkai, listWeaponsHonkai } from "~/features/honkaiSTR/utils";
+import { listElementsHonkai, listStarsHonkai, listWeaponsHonkai } from "~/features/honkaiSTR/utils";
+import { honkaiData } from "~/features/honkaiSTR/utils/mockApi";
 import { dataMockApiImages } from "~/utils";
 
 export const metadata: Metadata = {
