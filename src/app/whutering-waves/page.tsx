@@ -1,11 +1,12 @@
 import { Metadata } from "next";
-import Link from "next/link"
-import { Button } from "~/components/ui/button"
+import { HeaderApp } from "~/components/template";
+import { listStarsGenshin } from "~/features/genshin";
+import { listElementsWhutering, listWeaponsWhutering } from "~/features/whuteringWaves";
 import { dataMockApiImages } from "~/utils";
 
 export const metadata: Metadata = {
     title: "Whutering Waves | Interval Guide",
-    description: "guide for genshin impact",
+    description: "guide for whutering waves",
     icons: {
         icon: dataMockApiImages.whutering.icon
     }
@@ -13,15 +14,14 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <div className="pt-20 container text-white">
-            <Link href={'/'}>
-                <Button
-                    variant={'default'}
-                >
-                    go to genshin
-                </Button>
-            </Link>
-        </div>
+        <>
+            <HeaderApp
+                titleHeader="Whutering Waves"
+                listStars={listStarsGenshin}
+                listElements={listElementsWhutering}
+                listWeapons={listWeaponsWhutering}
+            />
+        </>
     )
 }
 
