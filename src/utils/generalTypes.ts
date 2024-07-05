@@ -1,4 +1,4 @@
-type RarityTypes = 3 | 4 | 5
+type RarityTypes = 4 | 5
 
 type TypePost = {
     title: string,

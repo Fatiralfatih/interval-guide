@@ -4,7 +4,14 @@ import { Button, Input, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger
 import { cn } from "~/utils"
 import type { HeaderAppProps } from "./HeaderApp"
 
-const View = ({ titleHeader, listElements, listStars, listWeapons, descriptionHeader }: HeaderAppProps) => {
+const View = ({
+    titleHeader,
+    listElements,
+    listStars,
+    listWeapons,
+    descriptionHeader,
+    listRoles,
+}: HeaderAppProps) => {
     return (
         <section className="space-y-6">
             <div className="flex flex-col gap-6  lg:flex-row lg:justify-between">
@@ -100,6 +107,40 @@ const View = ({ titleHeader, listElements, listStars, listWeapons, descriptionHe
                             ))}
                         </ul>
                     </div>
+
+                    {/* roles */}
+                    {listRoles && (
+                        <div className="flex py-3 w-full justify-center items-center border-b border-interval-purple-400 md:w-fit md:border-b-0 md:pe-3 md:py-1">
+                            <ul className="flex md:border-r md:border-r-interval-purple-400 px-2">
+                                {listRoles?.map(element => (
+                                    <li
+                                        key={element.title}
+                                    >
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button
+                                                    variant={'interval-purple'}
+                                                    size={'sm'}
+                                                    className="h-10"
+                                                >
+                                                    <Image
+                                                        src={String(element.thumbnail)}
+                                                        alt={'thumbnail' + element.title}
+                                                        className="md:w-[30px] aspect-auto"
+                                                        width={25}
+                                                        height={25}
+                                                    />
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="capitalize">
+                                                {element.title}
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
 
                     {/* weapons */}
                     <ul className="flex py-3 w-full justify-center items-center md:w-fit md:border-b-0 md:px-0 md:py-1">
