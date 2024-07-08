@@ -1,6 +1,7 @@
-import { WhuteringType } from "../types"
+import { KeyValueOfObject, TypePost } from "~/utils"
+import { WhuteringType, WhuteringTypeElements, WhuteringTypeWeapons } from "../types"
 
-const elementsWhutering = {
+const elementsWhutering: KeyValueOfObject<WhuteringTypeElements, TypePost> = {
     aero: {
         title: 'Aero',
         thumbnail: 'https://rerollcdn.com/WW/ww-images/icons/T_IconElementAero.webp',
@@ -27,7 +28,7 @@ const elementsWhutering = {
     }
 }
 
-const weaponsWhutering = {
+const weaponsWhutering: KeyValueOfObject<WhuteringTypeWeapons, TypePost> = {
     broadBlade: {
         title: 'Broad Blade',
         thumbnail: 'https://rerollcdn.com/WW/ww-images/icons/broadblade.webp'

@@ -3,7 +3,23 @@ import {
     TypePost,
 } from "~/utils"
 
-type GenshinElements = 'anemo' | 'cyro' | 'electro' | 'dendro' | 'geo' | 'hydro' | 'pyro'
+type GenshinElements = {
+    anemo: string,
+    cyro: string
+    electro: string
+    dendro: string
+    geo: string
+    hydro: string
+    pyro: string
+}
+
+type GenshinMaterial = {
+    justice: string,
+    everamber: string,
+    lumitoile: string,
+    transoceanicPearl: string,
+    fontemerUnihorn: string
+}
 
 type GenshinWeapons = 'bow' | 'catalyst' | 'claymore' | 'polearn' | 'sword'
 
@@ -66,4 +82,5 @@ export type {
     GenshinWeapons,
     GenshinRole,
     GenshinData,
+    GenshinMaterial,
 }

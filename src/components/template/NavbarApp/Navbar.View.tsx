@@ -284,27 +284,32 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                     honkaiSTR: listLinkItemsHonkai,
                                     whutering: listLinkItemsWhutering,
                                     zenless: listLinkItemsZenless,
-                                })?.map((item: ListLinkType) => (!item.children && (
-                                    <Fragment key={item.id}>
-                                        <Link
-                                            href={String(item.link)}
-                                            className={cn(navigationMenuTriggerStyle(),
-                                                'p-5',
-                                                renderValueBeetwenPath({
-                                                    genshin: 'hover:bg-genshin-800',
-                                                    honkaiSTR: 'hover:bg-honkaiSTR-800',
-                                                    zenless: 'hover:bg-zenless-600',
-                                                    whutering: 'hover:bg-interval-glory-900/50'
-                                                }),
-                                            )}
-                                        >
-                                            <NavigationMenuItem className="lg:text-[17px] lg:font-light">
-                                                {item.title}
-                                            </NavigationMenuItem>
-                                        </Link>
-                                    </Fragment>
-                                ))
-                                )}
+                                })?.map((item: ListLinkType) => {
+                                    return (!item.children && (
+                                        <Fragment key={item.id}>
+                                            <Link
+                                                href={String(item.link)}
+                                                className={cn(navigationMenuTriggerStyle(),
+                                                    'p-5',
+                                                    renderValueBeetwenPath({
+                                                        genshin: 'hover:bg-genshin-800',
+                                                        honkaiSTR: 'hover:bg-honkaiSTR-800',
+                                                        zenless: 'hover:bg-zenless-600',
+                                                        whutering: 'hover:bg-interval-glory-900/50'
+                                                    }),
+                                                    item.id === 1 && pathName === "/" ? 'bg-genshin-600/20' : '',
+                                                    item.id === 1 && pathName === '/honkai-star-rail' ? 'bg-honkaiSTR-600/30' : '',
+                                                    item.id === 1 && pathName === '/zenless-zone-zero' ? 'bg-zenless-600/40' : '',
+                                                    item.id === 1 && pathName === '/whutering-waves' ? 'bg-wuthering-800' : '',
+                                                )}
+                                            >
+                                                <NavigationMenuItem className="lg:text-[17px] lg:font-light">
+                                                    {item.title}
+                                                </NavigationMenuItem>
+                                            </Link>
+                                        </Fragment>)
+                                    )
+                                })}
                             </NavigationMenuList>
                         </NavigationMenu>
 

@@ -1,6 +1,7 @@
-import { ZenlessType } from "../types"
+import { KeyValueOfObject, TypePost } from "~/utils"
+import { ZenlessElements, ZenlessRoles, ZenlessStars, ZenlessType, ZenlessWeapons } from "../types"
 
-const starsZenless = {
+const starsZenless: KeyValueOfObject<ZenlessStars, TypePost> = {
     A: {
         title: 'A',
         thumbnail: 'https://rerollcdn.com/ZZZ/UI/a_big.png'
@@ -11,7 +12,7 @@ const starsZenless = {
     }
 }
 
-const elementsZenless = {
+const elementsZenless: KeyValueOfObject<ZenlessElements, TypePost> = {
     electric: {
         title: 'electric',
         thumbnail: 'https://rerollcdn.com/ZZZ/UI/electric.png'
@@ -34,7 +35,7 @@ const elementsZenless = {
     }
 }
 
-const weaponsZenless = {
+const weaponsZenless: KeyValueOfObject<ZenlessWeapons, TypePost> = {
     victoria: {
         title: 'victoria housekeeping co',
         thumbnail: 'https://rerollcdn.com/ZZZ/UI/victoria_housekeeping_co.png'
@@ -57,7 +58,7 @@ const weaponsZenless = {
     }
 }
 
-const rolesZenless = {
+const rolesZenless: KeyValueOfObject<ZenlessRoles, TypePost> = {
     anomaly: {
         title: 'anomaly',
         thumbnail: 'https://rerollcdn.com/ZZZ/UI/anomaly.png'

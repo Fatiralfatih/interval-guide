@@ -1,6 +1,7 @@
-import { HonkaiType } from "../types/dataTypes"
+import { KeyValueOfObject, TypePost } from "~/utils"
+import { HonkaiElements, HonkaiStars, HonkaiType, HonkaiWeapons } from "../types/dataTypes"
 
-const honkaiStars = {
+const honkaiStars: KeyValueOfObject<HonkaiStars, TypePost> = {
     4: {
         title: '4 Star',
         thumbnail: 'https://rerollcdn.com/STARRAIL/Filters/rarity_4.png'
@@ -11,7 +12,7 @@ const honkaiStars = {
     }
 }
 
-const honkaiElements = {
+const honkaiElements: KeyValueOfObject<HonkaiElements, TypePost> = {
     fire: {
         title: 'Fire',
         thumbnail: 'https://rerollcdn.com/STARRAIL/Filters/element_fire.png'
@@ -42,7 +43,7 @@ const honkaiElements = {
     }
 }
 
-const honkaiWeapons = {
+const honkaiWeapons: KeyValueOfObject<HonkaiWeapons, TypePost> = {
     abundance: {
         title: 'The Abudance',
         thumbnail: 'https://rerollcdn.com/STARRAIL/Filters/path_the_abundance.png'

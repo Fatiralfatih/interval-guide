@@ -1,6 +1,7 @@
-import { GenshinData } from "../types/dataTypes"
+import { KeyValueOfObject, TypePost } from "~/utils"
+import { GenshinData, GenshinElements, GenshinMaterial } from "../types/dataTypes"
 
-const genshinMaterials = {
+const genshinMaterials: KeyValueOfObject<GenshinMaterial, TypePost> = {
     justice: {
         title: 'Justice',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Farming/NEW/Justice.png'
@@ -23,7 +24,7 @@ const genshinMaterials = {
     }
 }
 
-const genshinElements = {
+const genshinElements: KeyValueOfObject<GenshinElements, TypePost> = {
     anemo: {
         title: 'anemo',
         thumbnail: 'https://rerollcdn.com/GENSHIN/UI/element_anemo.png',

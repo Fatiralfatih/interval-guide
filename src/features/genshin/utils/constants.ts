@@ -164,11 +164,11 @@ const listWeaponsGenshin: TypePost[] = [
 
 const listStarsGenshin: TypePost[] = [
     {
-        title: '4 Star',
+        title: '4',
         thumbnail: 'https://rerollcdn.com/GENSHIN/UI/rarity_4.png'
     },
     {
-        title: '5 Star',
+        title: '5',
         thumbnail: 'https://rerollcdn.com/GENSHIN/UI/rarity_5.png'
     }
 ]
