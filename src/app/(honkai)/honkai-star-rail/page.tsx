@@ -1,15 +1,5 @@
-import { Metadata } from "next";
 import { CharacterList, HeaderApp } from "~/components/template";
 import { honkaiData, listElementsHonkai, listStarsHonkai, listWeaponsHonkai } from "~/features/honkaiSTR/utils";
-import { dataMockApiImages } from "~/utils";
-
-export const metadata: Metadata = {
-    title: "Honkai Star Rail | Interval Guide",
-    description: "guide for honkai star rail",
-    icons: {
-        icon: dataMockApiImages.honkaiSTR.icon
-    }
-};
 
 const Page = () => {
     return (

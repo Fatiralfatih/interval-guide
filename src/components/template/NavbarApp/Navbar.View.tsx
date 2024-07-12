@@ -1,32 +1,23 @@
 import Image from "next/image"
-import { cn, dataMockApiImages, ListLinkType } from "~/utils"
+import { cn, dataMockApiImages } from "~/utils"
 import { IoClose, IoMenu } from "react-icons/io5"
-import { listLinksItemsGenshin, listLinksItemsGenshinMobile } from "~/features/genshin"
 import Link from "next/link"
 import { Fragment } from "react"
-import { listLinkItemsHonkai, listLinkItemsHonkaiMobile } from "~/features/honkaiSTR/utils"
-import { listLinkItemsWhutering } from "~/features/whuteringWaves"
-import { listLinkItemsZenless, listLinkItemsZenlessMobile } from "~/features/zenlessZoneZero"
 import { Button, Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui"
+import { NavbarProps } from "./Navbar"
+import { usePathname } from "next/navigation"
 
-interface NavbarViewProps {
-    renderValueBeetwenPath: (value: {
-        whutering?: string | Array<ListLinkType>,
-        genshin: string | Array<ListLinkType>,
-        honkaiSTR: string | Array<ListLinkType>,
-        zenless: string | Array<ListLinkType>,
-    }) => string & Array<ListLinkType>,
-    pathName: string;
-}
 
-const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
+const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
+
+    const pathName = usePathname()
 
     return (
         <header>
             <nav
                 className={cn(
                     "fixed rounded-lg top-0 py-2 px-4 z-10 w-full sm:px-6 lg:px-7 lg:py-0",
-                    renderValueBeetwenPath({
+                    renderValueBeetwenPath?.({
                         whutering: 'bg-wuthering-900',
                         genshin: 'bg-genshin-900',
                         honkaiSTR: 'bg-honkaiSTR-900',
@@ -43,16 +34,16 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
-                                        src={renderValueBeetwenPath({
+                                        src={String(renderValueBeetwenPath?.({
                                             genshin: dataMockApiImages.genshin.icon,
                                             honkaiSTR: dataMockApiImages.honkaiSTR.icon,
                                             whutering: dataMockApiImages.whutering.icon,
                                             zenless: dataMockApiImages.zenlessZoneZero.icon,
-                                        })}
-                                        alt={`logo-${renderValueBeetwenPath({
+                                        }))}
+                                        alt={`logo-${renderValueBeetwenPath?.({
                                             genshin: 'genshin-impact',
                                             honkaiSTR: 'honkai-star-rail',
-                                            whutering: 'whutering-waves',
+                                            whutering: 'wuthering-waves',
                                             zenless: 'zenless-zone-zero'
                                         })}`}
                                         className="rounded-full aspect-auto md:w-[30px]"
@@ -61,10 +52,10 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                     />
                                 </figure>
                                 <h4 className="truncate w-32 capitalize font-medium text-sm md:text-[16px] md:text-lg">
-                                    {String(renderValueBeetwenPath({
+                                    {String(renderValueBeetwenPath?.({
                                         genshin: 'genshin impact',
                                         honkaiSTR: 'honkai: star rail',
-                                        whutering: 'whutering waves',
+                                        whutering: 'wuthering waves',
                                         zenless: 'zenless zone zero',
                                     }))}
                                 </h4>
@@ -74,8 +65,15 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                         <Drawer direction="right">
                             <DrawerTrigger asChild>
                                 <Button
-                                    className="w-fit"
-                                    variant={"interval-purple"}
+                                    className={cn(
+                                        "w-fit bg-transparent",
+                                        renderValueBeetwenPath?.({
+                                            genshin: 'hover:bg-genshin-800',
+                                            whutering: 'hover:bg-wuthering-800',
+                                            honkaiSTR: 'hover:bg-honkaiSTR-800',
+                                            zenless: 'hover:bg-zenless-600'
+                                        })
+                                    )}
                                     size={'icon'}
                                 >
                                     <IoMenu className="text-3xl" />
@@ -90,40 +88,11 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                 </div>
                                 <div className="overflow-auto w-full h-screen  pb-8">
                                     <DrawerHeader className="pt-0 pb-0">
-                                        {/* honkai star rail */}
-                                        {pathName === "/honkai-star-rail" &&
-                                            listLinkItemsHonkaiMobile.map(item => (
-                                                <Link href={'#'} key={item.id}>
-                                                    <DrawerTitle className="   hover:bg-interval-purple-900 transition-all ease-in-out duration-200 border-b-[0.1px] border-b-interval-purple-500 py-3 text-sm md:text-lg rounded-sm">{item.title}</DrawerTitle>
-                                                </Link>
-                                            ))}
-
-                                        {/* genshin impact */}
-                                        {pathName === "/" && (
-                                            listLinksItemsGenshinMobile.map(item => (
-                                                <Link href={'#'} key={item.id}>
-                                                    <DrawerTitle className="border-b-[0.1px] border-b-interval-purple-500 hover:bg-interval-purple-900 transition-all ease-in-out duration-200 py-3 text-sm md:text-lg rounded-sm">{item.title}</DrawerTitle>
-                                                </Link>
-                                            ))
-                                        )}
-
-                                        {/* whutering waves */}
-                                        {pathName === "/whutering-waves" && (
-                                            listLinkItemsWhutering.map(item => (
-                                                <Link href={'#'} key={item.id}>
-                                                    <DrawerTitle className="border-b-[0.1px] border-b-interval-purple-500 hover:bg-interval-purple-900 transition-all ease-in-out duration-200 py-3 text-sm md:text-lg rounded-sm">{item.title}</DrawerTitle>
-                                                </Link>
-                                            ))
-                                        )}
-
-                                        {/* zenless zone zero */}
-                                        {pathName === "/zenless-zone-zero" && (
-                                            listLinkItemsZenlessMobile.map(item => (
-                                                <Link href={'#'} key={item.id}>
-                                                    <DrawerTitle className="border-b-[0.1px] border-b-interval-purple-500 hover:bg-interval-purple-900 transition-all ease-in-out duration-200 py-3 text-sm md:text-lg rounded-sm">{item.title}</DrawerTitle>
-                                                </Link>
-                                            ))
-                                        )}
+                                        {listLinkItems.mobile.map(item => (
+                                            <Link href={'#'} key={item.id}>
+                                                <DrawerTitle className="border-b-[0.1px] border-b-interval-purple-500 hover:bg-interval-purple-900 transition-all ease-in-out duration-200 py-3 text-sm md:text-lg rounded-sm">{item.title}</DrawerTitle>
+                                            </Link>
+                                        ))}
                                     </DrawerHeader>
 
                                     <DrawerHeader className="bg-interval-purple-700 flex flex-col rounded-lg p-0 py-2 px-4">
@@ -175,7 +144,7 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                                         height={25}
                                                     />
                                                     <p className="text-sm font-normal md:text-lg">
-                                                        Whutering Waves
+                                                        Wuthering Waves
                                                     </p>
                                                 </div>
                                             </Link>
@@ -260,7 +229,7 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                             </li>
 
                             {/* whutering waves */}
-                            <li className={`py-2 px-3 ${pathName === "/whutering-waves" ? 'bg-wuthering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
+                            <li className={`py-2 px-3 ${pathName === "/whutering-waves" ? 'bg-whutering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
                                 <Link href={'/whutering-waves'} className="flex items-center gap-2">
                                     <Image
                                         src={dataMockApiImages.whutering.icon}
@@ -270,7 +239,7 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                         alt={`logo-honkai:star-rail`}
                                     />
                                     <p className="font-[400]">
-                                        Whutering Waves
+                                        Wuthering Waves
                                     </p>
                                 </Link>
                             </li>
@@ -279,19 +248,14 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                     <div className="flex items-center md:ps-[135px] lg:ps-52">
                         <NavigationMenu>
                             <NavigationMenuList className={`text-[16px] space-x-0`}>
-                                {renderValueBeetwenPath({
-                                    genshin: listLinksItemsGenshin,
-                                    honkaiSTR: listLinkItemsHonkai,
-                                    whutering: listLinkItemsWhutering,
-                                    zenless: listLinkItemsZenless,
-                                })?.map((item: ListLinkType) => {
-                                    return (!item.children && (
+                                {listLinkItems.web.filter(item => !item.children).map(item => (
+                                    (
                                         <Fragment key={item.id}>
                                             <Link
                                                 href={String(item.link)}
                                                 className={cn(navigationMenuTriggerStyle(),
                                                     'p-5',
-                                                    renderValueBeetwenPath({
+                                                    renderValueBeetwenPath?.({
                                                         genshin: 'hover:bg-genshin-800',
                                                         honkaiSTR: 'hover:bg-honkaiSTR-800',
                                                         zenless: 'hover:bg-zenless-600',
@@ -300,28 +264,23 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
                                                     item.id === 1 && pathName === "/" ? 'bg-genshin-600/20' : '',
                                                     item.id === 1 && pathName === '/honkai-star-rail' ? 'bg-honkaiSTR-600/30' : '',
                                                     item.id === 1 && pathName === '/zenless-zone-zero' ? 'bg-zenless-600/40' : '',
-                                                    item.id === 1 && pathName === '/whutering-waves' ? 'bg-wuthering-800' : '',
+                                                    item.id === 1 && pathName === '/whutering-waves' ? 'bg-whutering-800' : '',
                                                 )}
                                             >
                                                 <NavigationMenuItem className="lg:text-[17px] lg:font-light">
                                                     {item.title}
                                                 </NavigationMenuItem>
                                             </Link>
-                                        </Fragment>)
+                                        </Fragment>
                                     )
-                                })}
+                                ))}
                             </NavigationMenuList>
                         </NavigationMenu>
 
                         <NavigationMenu>
                             <NavigationMenuList>
-                                <NavigationMenuItem className="">
-                                    {renderValueBeetwenPath({
-                                        genshin: listLinksItemsGenshin.filter(item => item.children),
-                                        honkaiSTR: listLinkItemsHonkai.filter(item => item.children),
-                                        whutering: undefined,
-                                        zenless: listLinkItemsZenless.filter(item => item.children),
-                                    })?.map((item: ListLinkType) => (
+                                <NavigationMenuItem>
+                                    {listLinkItems.web.filter(item => item.children).map(item => (
                                         <Fragment key={item.id}>
                                             <NavigationMenuTrigger className="text-[16px] p-4 h-[60px] font-medium lg:text-[17px] lg:font-light">
                                                 {item.title}
@@ -353,4 +312,4 @@ const View = ({ renderValueBeetwenPath, pathName }: NavbarViewProps) => {
 }
 
 
-export { View }
+export default NavbarView
