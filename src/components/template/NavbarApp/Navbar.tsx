@@ -38,11 +38,6 @@ const Navbar = ({ listLinkItems }: NavbarProps) => {
     }
   }
 
-  console.log({
-    web: listLinkItems.web,
-    mobile: listLinkItems.mobile,
-  });
-
   return (
     <NavbarView
       renderValueBeetwenPath={renderValueBeetwenPath}
