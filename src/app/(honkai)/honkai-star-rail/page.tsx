@@ -6,7 +6,7 @@ import { dataMockApiImages } from "~/utils";
 
 export const metadata: Metadata = {
     title: "Honkai Star Rail | Interval Guide",
-    description: "guide for genshin impact",
+    description: "guide for honkai star rail",
     icons: {
         icon: dataMockApiImages.honkaiSTR.icon
     }

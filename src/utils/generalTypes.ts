@@ -20,9 +20,14 @@ interface ListLinkType {
     children?: ListLinkType[],
 }
 
+type KeyValueOfObject<T extends { [key: string]: any }, O> = {
+    [key in keyof T]: O
+}
+
 export type {
     WeaponsGeneral,
     RarityTypes,
     TypePost,
-    ListLinkType
+    ListLinkType,
+    KeyValueOfObject
 }

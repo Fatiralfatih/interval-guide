@@ -1,19 +1,32 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { View } from "./Navbar.View"
+import NavbarView from "./Navbar.View"
 import { ListLinkType } from "~/utils"
 
-const Navbar = () => {
+export interface NavbarProps {
+  renderValueBeetwenPath?: (value: {
+    whutering?: string,
+    genshin: string,
+    honkaiSTR: string,
+    zenless: string,
+  }) => string | undefined,
+  listLinkItems: {
+    web: ListLinkType[],
+    mobile: ListLinkType[]
+  }
+}
+
+const Navbar = ({ listLinkItems }: NavbarProps) => {
 
   const pathName = usePathname()
 
   const renderValueBeetwenPath = (value: {
-    whutering?: string | Array<ListLinkType>,
-    genshin: string | Array<ListLinkType>,
-    honkaiSTR: string | Array<ListLinkType>,
-    zenless: string | Array<ListLinkType>
-  }): any => {
+    whutering?: string,
+    genshin: string,
+    honkaiSTR: string,
+    zenless: string
+  }): string | undefined => {
     if (pathName === "/whutering-waves") {
       return value.whutering
     } else if (pathName === "/honkai-star-rail") {
@@ -26,9 +39,9 @@ const Navbar = () => {
   }
 
   return (
-    <View
+    <NavbarView
       renderValueBeetwenPath={renderValueBeetwenPath}
-      pathName={pathName}
+      listLinkItems={listLinkItems}
     />
   )
 }
