@@ -34,12 +34,12 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
-                                        src={String(renderValueBeetwenPath?.({
+                                        src={renderValueBeetwenPath?.({
                                             genshin: dataMockApiImages.genshin.icon,
                                             honkaiSTR: dataMockApiImages.honkaiSTR.icon,
                                             whutering: dataMockApiImages.whutering.icon,
                                             zenless: dataMockApiImages.zenlessZoneZero.icon,
-                                        }))}
+                                        })}
                                         alt={`logo-${renderValueBeetwenPath?.({
                                             genshin: 'genshin-impact',
                                             honkaiSTR: 'honkai-star-rail',
@@ -133,8 +133,8 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                                         )}
 
                                         {/* whutering waves */}
-                                        {pathName !== '/whutering-waves' && (
-                                            <Link href={'/whutering-waves'}>
+                                        {pathName !== '/wuthering-waves' && (
+                                            <Link href={'/wuthering-waves'}>
                                                 <div className="flex gap-2 justify-center items-center py-3 hover:bg-interval-purple-900 border-b-[0.1px] rounded-sm border-b-white/20 transition-all ease-in-out duration-300">
                                                     <Image
                                                         className="rounded-full md:w-7"
@@ -144,7 +144,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                                                         height={25}
                                                     />
                                                     <p className="text-sm font-normal md:text-lg">
-                                                        Wuthering Waves
+                                                        wuthering Waves
                                                     </p>
                                                 </div>
                                             </Link>
@@ -229,8 +229,8 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                             </li>
 
                             {/* whutering waves */}
-                            <li className={`py-2 px-3 ${pathName === "/whutering-waves" ? 'bg-wuthering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
-                                <Link href={'/whutering-waves'} className="flex items-center gap-2">
+                            <li className={`py-2 px-3 ${pathName === "/wuthering-waves" ? 'bg-wuthering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
+                                <Link href={'/wuthering-waves'} className="flex items-center gap-2">
                                     <Image
                                         src={dataMockApiImages.whutering.icon}
                                         width={24}

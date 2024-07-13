@@ -27,7 +27,7 @@ const Navbar = ({ listLinkItems }: NavbarProps) => {
     honkaiSTR: string,
     zenless: string
   }): string | undefined => {
-    if (pathName === "/whutering-waves") {
+    if (pathName === "/wuthering-waves") {
       return value.whutering
     } else if (pathName === "/honkai-star-rail") {
       return value.honkaiSTR
