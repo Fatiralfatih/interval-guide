@@ -1,4 +1,4 @@
-import { genshinData, listElementsGenshin, listStarsGenshin, listWeaponsGenshin, } from "~/features/genshin/utils";
+import { genshinData, listElementsGenshin, listStarsGenshin, listWeaponsGenshin } from "~/features/genshin/utils";
 import { CharacterList, HeaderApp } from "~/components/template";
 
 const HomePage = () => {
@@ -7,10 +7,10 @@ const HomePage = () => {
     <>
       {/* header app */}
       <HeaderApp
-        titleHeader="Genshin Impact"
         listElements={listElementsGenshin}
         listStars={listStarsGenshin}
         listWeapons={listWeaponsGenshin}
+        titleHeader="Genshin Impact"
       />
 
       {/* characters list */}

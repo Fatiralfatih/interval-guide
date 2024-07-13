@@ -1,5 +1,5 @@
-import { honkaiElements, honkaiStars, honkaiWeapons } from "./mockApi";
 import { ListLinkType, TypePost } from "~/utils";
+import { honkaiElements, honkaiStars, honkaiWeapons } from "./mockApi";
 
 const listLinkItemsHonkai: ListLinkType[] = [
     {
@@ -94,8 +94,14 @@ const listLinkItemsHonkaiMobile: ListLinkType[] = [
 ]
 
 const listStarsHonkai: TypePost[] = [
-    honkaiStars[4],
-    honkaiStars[5],
+    {
+        title: honkaiStars[4].title,
+        thumbnail: honkaiStars[4].thumbnail,
+    },
+    {
+        title: honkaiStars[5].title,
+        thumbnail: honkaiStars[5].thumbnail
+    }
 ]
 
 const listElementsHonkai: TypePost[] = [

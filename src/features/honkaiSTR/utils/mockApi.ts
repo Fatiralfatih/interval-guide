@@ -126,7 +126,7 @@ const honkaiData: HonkaiType[] = [
         thumbnail: 'https://rerollcdn.com/STARRAIL/Characters/Thumb/1211.png',
     },
     {
-        id: 6,
+        id: 52,
         hero: 'black swan',
         element: honkaiElements.wind,
         link: `path-/black-swan`,
@@ -150,7 +150,7 @@ const honkaiData: HonkaiType[] = [
         thumbnail: 'https://rerollcdn.com/STARRAIL/Characters/Thumb/3020.png',
     },
     {
-        id: 9,
+        id: 53,
         hero: 'bronya',
         element: honkaiElements.wind,
         link: `path-/bronya`,
@@ -504,8 +504,8 @@ const honkaiData: HonkaiType[] = [
 ]
 
 export {
+    honkaiData,
     honkaiElements,
     honkaiStars,
     honkaiWeapons,
-    honkaiData,
 }
