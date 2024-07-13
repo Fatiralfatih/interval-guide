@@ -2,9 +2,11 @@
 
 import { usePathname } from "next/navigation"
 import NavbarView from "./Navbar.View"
-import { ListLinkType } from "~/utils"
+import { IconPost, ListLinkType } from "~/utils"
+import { cva, VariantProps } from "class-variance-authority"
 
-export interface NavbarProps {
+export interface NavbarProps extends VariantProps<typeof navbarVariants> {
+  className?: string
   renderValueBeetwenPath?: (value: {
     whutering?: string,
     genshin: string,
@@ -15,9 +17,28 @@ export interface NavbarProps {
     web: ListLinkType[],
     mobile: ListLinkType[]
   }
+  iconGame: IconPost
 }
 
-const Navbar = ({ listLinkItems }: NavbarProps) => {
+const navbarVariants = cva(
+  "",
+  {
+    variants: {
+      variant: {
+        default: "bg-zinc-950",
+        genshin: "bg-genshin-900",
+        whutering: "bg-wuthering-900",
+        honkai: "bg-honkaiSTR-900",
+        zenless: "bg-zenless-900"
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    }
+  }
+)
+
+const Navbar = ({ listLinkItems, variant, className, iconGame }: NavbarProps) => {
 
   const pathName = usePathname()
 
@@ -42,8 +63,11 @@ const Navbar = ({ listLinkItems }: NavbarProps) => {
     <NavbarView
       renderValueBeetwenPath={renderValueBeetwenPath}
       listLinkItems={listLinkItems}
+      variant={variant}
+      className={className}
+      iconGame={iconGame}
     />
   )
 }
 
-export { Navbar }
+export { Navbar, navbarVariants }

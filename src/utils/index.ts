@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge"
 export * from './font'
 export * from './mockApi'
 export * from './generalTypes'
+export * from './constants'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

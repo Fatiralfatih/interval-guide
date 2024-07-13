@@ -1,36 +1,53 @@
+import { GamesName, IconPost, KeyValueOfObject } from "./generalTypes"
 
-const dataMockApiImages = {
+const dataMockApiImages: KeyValueOfObject<GamesName, IconPost> = {
     whutering: {
         icon: "https://rerollcdn.com/GENSHIN/GameIcons/wuthering-waves-game-icon.png",
-        thumbnail: 'thumbnail whutering',
+        title: 'Wuthering Waves',
         alt: 'icon-whutering',
     },
     genshin: {
         icon: 'https://rerollcdn.com/GENSHIN/GameIcons/genshin-game-icon.png',
-        thumbnail: 'thumbnail genshin',
+        title: 'Genshin Impact',
         alt: 'icon-genshin',
     },
     honkaiSTR: {
         icon: 'https://rerollcdn.com/GENSHIN/GameIcons/star-rail-game-icon.png',
-        thumbnail: 'thumbnail honkaiSTR',
+        title: 'Honkai: Star Rail',
         alt: 'icon-hsr',
     },
     zenlessZoneZero: {
         icon: 'https://rerollcdn.com/GENSHIN/GameIcons/zzz-game-icon.png',
-        thumbnail: 'thumbnail zenless zone zero',
+        title: 'Zenless Zone Zero',
         alt: 'icon-zzz',
     }
 }
 
 const dataMockApis = {
     genshin: {
+        id: 1,
         name: 'genshin impact',
-        images: dataMockApiImages.genshin
+        images: dataMockApiImages.genshin,
+        link: '/',
     },
-    whutering: {
-        name: 'whutering waves',
-        images: dataMockApiImages.whutering
+    wuthering: {
+        id: 2,
+        name: 'wuthering waves',
+        images: dataMockApiImages.whutering,
+        link: '/wuthering-waves'
     },
+    honkaiSTR: {
+        id: 3,
+        name: 'Honkai: Star Rail',
+        images: dataMockApiImages.honkaiSTR,
+        link: '/honkai-star-rail'
+    },
+    zenlessZoneZero: {
+        id: 4,
+        name: 'Zenless Zone Zero',
+        images: dataMockApiImages.zenlessZoneZero,
+        link: '/zenless-zone-zero'
+    }
 }
 
 export {

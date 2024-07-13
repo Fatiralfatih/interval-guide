@@ -1,14 +1,13 @@
 import Image from "next/image"
-import { cn, dataMockApiImages } from "~/utils"
+import { cn, dataMockApiImages, listGames } from "~/utils"
 import { IoClose, IoMenu } from "react-icons/io5"
 import Link from "next/link"
 import { Fragment } from "react"
 import { Button, Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui"
-import { NavbarProps } from "./Navbar"
+import { NavbarProps, navbarVariants } from "./Navbar"
 import { usePathname } from "next/navigation"
 
-
-const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
+const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant, iconGame }: NavbarProps) => {
 
     const pathName = usePathname()
 
@@ -17,12 +16,8 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
             <nav
                 className={cn(
                     "fixed rounded-lg top-0 py-2 px-4 z-10 w-full sm:px-6 lg:px-7 lg:py-0",
-                    renderValueBeetwenPath?.({
-                        whutering: 'bg-wuthering-900',
-                        genshin: 'bg-genshin-900',
-                        honkaiSTR: 'bg-honkaiSTR-900',
-                        zenless: 'bg-zenless-900',
-                    })
+                    navbarVariants({ variant }),
+                    className,
                 )}
             >
                 {/* navbar for mobile */}
@@ -52,12 +47,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                                     />
                                 </figure>
                                 <h4 className="truncate w-32 capitalize font-medium text-sm md:text-[16px] md:text-lg">
-                                    {String(renderValueBeetwenPath?.({
-                                        genshin: 'genshin impact',
-                                        honkaiSTR: 'honkai: star rail',
-                                        whutering: 'wuthering waves',
-                                        zenless: 'zenless zone zero',
-                                    }))}
+                                    {iconGame?.title}
                                 </h4>
                             </div>
                         </div>
@@ -176,28 +166,43 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                 </section>
 
                 {/* navbar for website */}
-                <section className={`hidden lg:flex lg:flex-col `}>
+                <section className={`hidden lg:flex lg:flex-col`}>
                     <div className="flex gap-5">
                         <h1 className="text-xl font-bold pt-2 md:text-2xl">Interval.GG</h1>
                         <ul className="bg-speechless flex rounded-b-lg capitalize text-xs min-w-full lg:text-sm">
                             {/* genshin impact */}
-                            <li className={`py-2 px-3 ${pathName === "/" ? 'bg-genshin-800 rounded-bl-lg' : 'hover:bg-interval-glory-900 rounded-bl-lg'} `}>
-                                <Link href={'/'} className="flex items-center gap-2">
-                                    <Image
-                                        src={dataMockApiImages.genshin.icon}
-                                        width={24}
-                                        height={24}
-                                        className="rounded-full aspect-auto lg:w-[26px]"
-                                        alt={`logo-honkai:star-rail`}
-                                    />
-                                    <p className="font-[400]">
-                                        Genshin Impact
-                                    </p>
-                                </Link>
-                            </li>
+                            {listGames.map((item, index) => {
+                                return (
+                                    <li
+                                        key={item.id}
+                                        className={cn(
+                                            "py-2 px-3",
+                                            item.id === 1 && index === 0 ? navbarVariants({ variant }) : 'hover:bg-interval-glory-900',
+                                        )}
+                                    // className={
+                                    //     cn(
+                                    //         `py-2 px-3 ${pathName === "/"
+                                    //             ? 'bg-genshin-800 rounded-bl-lg'
+                                    //             : 'hover:bg-interval-glory-900 rounded-bl-lg'} `)}
+                                    >
+                                        <Link href={item.link} className="flex items-center gap-2">
+                                            <Image
+                                                src={item.images.icon}
+                                                width={24}
+                                                height={24}
+                                                className="rounded-full aspect-auto lg:w-[26px]"
+                                                alt={item.images.alt}
+                                            />
+                                            <p className="font-[400] capitalize">
+                                                {item.name}
+                                            </p>
+                                        </Link>
+                                    </li>
+                                )
+                            })}
 
                             {/* honkai star rail */}
-                            <li className={`py-2 px-3 ${pathName === "/honkai-star-rail" ? 'bg-honkaiSTR-800' : 'hover:bg-interval-glory-900 '}`}>
+                            {/* <li className={`py-2 px-3 ${pathName === "/honkai-star-rail" ? 'bg-honkaiSTR-800' : 'hover:bg-interval-glory-900 '}`}>
                                 <Link href={'/honkai-star-rail'} className="flex items-center gap-2">
                                     <Image
                                         src={dataMockApiImages.honkaiSTR.icon}
@@ -210,10 +215,10 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                                         Honkai: Star Rail
                                     </p>
                                 </Link>
-                            </li>
+                            </li> */}
 
                             {/* zen less zone zero */}
-                            <li className={`py-2 px-3 ${pathName === "/zenless-zone-zero" ? 'bg-zenless-900' : 'hover:bg-interval-glory-900'} rounded-b-lg`}>
+                            {/* <li className={`py-2 px-3 ${pathName === "/zenless-zone-zero" ? 'bg-zenless-900' : 'hover:bg-interval-glory-900'} rounded-b-lg`}>
                                 <Link href={'zenless-zone-zero'} className="flex items-center gap-2 ">
                                     <Image
                                         src={dataMockApiImages.zenlessZoneZero.icon}
@@ -226,7 +231,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                                         Zenless zone zero
                                     </p>
                                 </Link>
-                            </li>
+                            </li> */}
 
                             {/* whutering waves */}
                             <li className={`py-2 px-3 ${pathName === "/wuthering-waves" ? 'bg-wuthering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>

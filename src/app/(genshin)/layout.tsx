@@ -4,8 +4,9 @@ import { cn } from "~/utils";
 import { roboto } from "~/utils/font";
 import { dataMockApiImages } from "~/utils/mockApi";
 import { Footer } from "~/components/ui/Footer";
-import { Navbar } from "~/components/template";
 import { listLinksItemsGenshin, listLinksItemsGenshinMobile } from "~/features/genshin";
+import { Navbar } from "~/components/template";
+
 
 export const metadata: Metadata = {
   title: "Genshin Impact | Interval Guide",
@@ -29,6 +30,8 @@ export default function RootLayout({
             web: listLinksItemsGenshin,
             mobile: listLinksItemsGenshinMobile,
           }}
+          variant={'genshin'}
+          iconGame={dataMockApiImages.genshin}
         />
         <main className="pt-32 container md:px-6 lg:px-10 xl:px-52">
           <div className=" bg-interval-purple-800 p-5 md:p-6 md:py-10 lg:p-7 rounded-md">
