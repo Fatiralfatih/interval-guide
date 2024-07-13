@@ -229,7 +229,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems }: NavbarProps) => {
                             </li>
 
                             {/* whutering waves */}
-                            <li className={`py-2 px-3 ${pathName === "/whutering-waves" ? 'bg-whutering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
+                            <li className={`py-2 px-3 ${pathName === "/whutering-waves" ? 'bg-wuthering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
                                 <Link href={'/whutering-waves'} className="flex items-center gap-2">
                                     <Image
                                         src={dataMockApiImages.whutering.icon}
