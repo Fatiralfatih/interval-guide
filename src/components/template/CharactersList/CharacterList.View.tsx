@@ -13,7 +13,7 @@ const View = ({ data }: CharacterListProps) => {
                     {data.map(item => (
                         <Link
                             key={item.id}
-                            href={'#'}
+                            href={item.link}
                             className="relative flex flex-col items-center rounded-sm group px-[10px] py-4 md:px-4 xl:px-5"
                         >
                             <Image

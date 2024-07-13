@@ -20,6 +20,19 @@ interface ListLinkType {
     children?: ListLinkType[],
 }
 
+type IconPost = {
+    icon: string
+    title: string,
+    alt: string
+}
+
+type GamesName = {
+    whutering: string,
+    genshin: string,
+    honkaiSTR: string,
+    zenlessZoneZero: string
+}
+
 type KeyValueOfObject<T extends { [key: string]: any }, O> = {
     [key in keyof T]: O
 }
@@ -29,5 +42,7 @@ export type {
     RarityTypes,
     TypePost,
     ListLinkType,
-    KeyValueOfObject
+    KeyValueOfObject,
+    IconPost,
+    GamesName
 }
