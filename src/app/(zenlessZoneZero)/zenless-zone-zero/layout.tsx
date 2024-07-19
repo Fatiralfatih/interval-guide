@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Navbar } from "~/components/template";
 import { Footer } from "~/components/ui/Footer";
-import { cn, dataMockApiImages, roboto } from "~/utils";
+import { cn, dataMockApiImages, dataMockApis, roboto } from "~/utils";
 import '~/app/globals.css'
 import { listLinkItemsZenless, listLinkItemsZenlessMobile } from "~/features/zenlessZoneZero";
 
@@ -27,6 +27,7 @@ export default function RootLayout({
             mobile: listLinkItemsZenlessMobile,
           }}
           variant={'zenless'}
+          iconGame={dataMockApis.zenlessZoneZero.images}
         />
         <main className="pt-32 container md:px-6 lg:px-10 xl:px-52">
           <div className=" bg-interval-purple-800 p-5 md:p-6 md:py-10 lg:p-7 rounded-md">

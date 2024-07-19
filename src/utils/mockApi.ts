@@ -1,3 +1,4 @@
+import { genshinData } from "~/features/genshin"
 import { GamesName, IconPost, KeyValueOfObject } from "./generalTypes"
 
 const dataMockApiImages: KeyValueOfObject<GamesName, IconPost> = {
@@ -29,24 +30,28 @@ const dataMockApis = {
         name: 'genshin impact',
         images: dataMockApiImages.genshin,
         link: '/',
+        data: genshinData
     },
     wuthering: {
         id: 2,
         name: 'wuthering waves',
         images: dataMockApiImages.whutering,
-        link: '/wuthering-waves'
+        link: '/wuthering-waves',
+        data: genshinData
     },
     honkaiSTR: {
         id: 3,
         name: 'Honkai: Star Rail',
         images: dataMockApiImages.honkaiSTR,
-        link: '/honkai-star-rail'
+        link: '/honkai-star-rail',
+        data: genshinData
     },
     zenlessZoneZero: {
         id: 4,
         name: 'Zenless Zone Zero',
         images: dataMockApiImages.zenlessZoneZero,
-        link: '/zenless-zone-zero'
+        link: '/zenless-zone-zero',
+        data: genshinData
     }
 }
 

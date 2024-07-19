@@ -11,6 +11,10 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
 
     const pathName = usePathname()
 
+    const getSlug = () => {
+        return pathName.replace('/characters/', '')
+    }
+
     return (
         <header>
             <nav
@@ -29,25 +33,15 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
-                                        src={renderValueBeetwenPath?.({
-                                            genshin: dataMockApiImages.genshin.icon,
-                                            honkaiSTR: dataMockApiImages.honkaiSTR.icon,
-                                            whutering: dataMockApiImages.whutering.icon,
-                                            zenless: dataMockApiImages.zenlessZoneZero.icon,
-                                        })}
-                                        alt={`logo-${renderValueBeetwenPath?.({
-                                            genshin: 'genshin-impact',
-                                            honkaiSTR: 'honkai-star-rail',
-                                            whutering: 'wuthering-waves',
-                                            zenless: 'zenless-zone-zero'
-                                        })}`}
-                                        className="rounded-full aspect-auto md:w-[30px]"
+                                        src={iconGame.icon}
+                                        alt={iconGame.alt}
+                                        className="rounded-full w-[25px] h-[25px] aspect-auto md:w-[30px]"
                                         width={25}
                                         height={25}
                                     />
                                 </figure>
-                                <h4 className="truncate w-32 capitalize font-medium text-sm md:text-[16px] md:text-lg">
-                                    {iconGame?.title}
+                                <h4 className="truncate w-32 capitalize font-medium text-sm md:text-[16px] md:w-full">
+                                    {iconGame.title}
                                 </h4>
                             </div>
                         </div>
@@ -171,86 +165,46 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                         <h1 className="text-xl font-bold pt-2 md:text-2xl">Interval.GG</h1>
                         <ul className="bg-speechless flex rounded-b-lg capitalize text-xs min-w-full lg:text-sm">
                             {/* genshin impact */}
-                            {listGames.map((item, index) => {
-                                return (
-                                    <li
-                                        key={item.id}
-                                        className={cn(
-                                            "py-2 px-3",
-                                            item.id === 1 && index === 0 ? navbarVariants({ variant }) : 'hover:bg-interval-glory-900',
-                                        )}
-                                    // className={
-                                    //     cn(
-                                    //         `py-2 px-3 ${pathName === "/"
-                                    //             ? 'bg-genshin-800 rounded-bl-lg'
-                                    //             : 'hover:bg-interval-glory-900 rounded-bl-lg'} `)}
-                                    >
-                                        <Link href={item.link} className="flex items-center gap-2">
-                                            <Image
-                                                src={item.images.icon}
-                                                width={24}
-                                                height={24}
-                                                className="rounded-full aspect-auto lg:w-[26px]"
-                                                alt={item.images.alt}
-                                            />
-                                            <p className="font-[400] capitalize">
-                                                {item.name}
-                                            </p>
-                                        </Link>
-                                    </li>
-                                )
-                            })}
+                            {listGames.map((item) => (
+                                <li
+                                    key={item.id}
+                                    className={cn(
+                                        "py-2 px-3 hover:bg-interval-glory-900 hover:rounded-b-lg",
+                                        pathName === `/characters/${getSlug()}` && item.id === 1 ? 'bg-genshin-800 hover:bg-genshin-800' : '',
 
-                            {/* honkai star rail */}
-                            {/* <li className={`py-2 px-3 ${pathName === "/honkai-star-rail" ? 'bg-honkaiSTR-800' : 'hover:bg-interval-glory-900 '}`}>
-                                <Link href={'/honkai-star-rail'} className="flex items-center gap-2">
-                                    <Image
-                                        src={dataMockApiImages.honkaiSTR.icon}
-                                        width={24}
-                                        height={24}
-                                        className="rounded-full aspect-auto lg:w-[26px]"
-                                        alt={`logo-honkai:star-rail`}
-                                    />
-                                    <p className="font-[400]">
-                                        Honkai: Star Rail
-                                    </p>
-                                </Link>
-                            </li> */}
-
-                            {/* zen less zone zero */}
-                            {/* <li className={`py-2 px-3 ${pathName === "/zenless-zone-zero" ? 'bg-zenless-900' : 'hover:bg-interval-glory-900'} rounded-b-lg`}>
-                                <Link href={'zenless-zone-zero'} className="flex items-center gap-2 ">
-                                    <Image
-                                        src={dataMockApiImages.zenlessZoneZero.icon}
-                                        width={24}
-                                        height={24}
-                                        className="rounded-full aspect-auto lg:w-[26px]"
-                                        alt={`logo-honkai:star-rail`}
-                                    />
-                                    <p className="font-[400]">
-                                        Zenless zone zero
-                                    </p>
-                                </Link>
-                            </li> */}
-
-                            {/* whutering waves */}
-                            <li className={`py-2 px-3 ${pathName === "/wuthering-waves" ? 'bg-wuthering-800 rounded-br-lg' : 'hover:bg-interval-glory-900 rounded-br-lg'}`}>
-                                <Link href={'/wuthering-waves'} className="flex items-center gap-2">
-                                    <Image
-                                        src={dataMockApiImages.whutering.icon}
-                                        width={24}
-                                        height={24}
-                                        className="rounded-full aspect-auto lg:w-[26px]"
-                                        alt={`logo-honkai:star-rail`}
-                                    />
-                                    <p className="font-[400]">
-                                        Wuthering Waves
-                                    </p>
-                                </Link>
-                            </li>
+                                        pathName === '/' && item.id === 1
+                                            ? navbarVariants({ variant: 'genshin', className: 'hover:bg-genshin-900 ' })
+                                            : '',
+                                        pathName === "/wuthering-waves" && item.id === 2
+                                            ? navbarVariants({ variant: 'whutering', className: 'hover:bg-wuthering-900' })
+                                            : '',
+                                        pathName === '/honkai-star-rail' && item.id === 3
+                                            ? navbarVariants({ variant: 'honkai', className: 'hover:bg-honkaiSTR-900' })
+                                            : '',
+                                        pathName === '/zenless-zone-zero' && item.id === 4
+                                            ? navbarVariants({ variant: 'zenless', className: 'hover:bg-zenless-900' })
+                                            : '',
+                                    )}
+                                >
+                                    <Link href={item.link} className="flex items-center gap-2">
+                                        <Image
+                                            src={item.images.icon}
+                                            width={24}
+                                            height={24}
+                                            className="rounded-full aspect-auto lg:w-[26px]"
+                                            alt={item.images.alt}
+                                        />
+                                        <p className="font-[400] capitalize">
+                                            {item.name}
+                                        </p>
+                                    </Link>
+                                </li>
+                            )
+                            )}
                         </ul>
                     </div>
                     <div className="flex items-center md:ps-[135px] lg:ps-52">
+                        {/* menu not children */}
                         <NavigationMenu>
                             <NavigationMenuList className={`text-[16px] space-x-0`}>
                                 {listLinkItems.web.filter(item => !item.children).map(item => (
@@ -269,7 +223,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                                                     item.id === 1 && pathName === "/" ? 'bg-genshin-600/20' : '',
                                                     item.id === 1 && pathName === '/honkai-star-rail' ? 'bg-honkaiSTR-600/30' : '',
                                                     item.id === 1 && pathName === '/zenless-zone-zero' ? 'bg-zenless-600/40' : '',
-                                                    item.id === 1 && pathName === '/whutering-waves' ? 'bg-whutering-800' : '',
+                                                    item.id === 1 && pathName === '/wuthering-waves' ? 'bg-wuthering-800' : '',
                                                 )}
                                             >
                                                 <NavigationMenuItem className="lg:text-[17px] lg:font-light">
@@ -282,21 +236,35 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                             </NavigationMenuList>
                         </NavigationMenu>
 
+                        {/* menu with children */}
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
                                     {listLinkItems.web.filter(item => item.children).map(item => (
                                         <Fragment key={item.id}>
-                                            <NavigationMenuTrigger className="text-[16px] p-4 h-[60px] font-medium lg:text-[17px] lg:font-light">
+                                            <NavigationMenuTrigger
+                                                className={cn(
+                                                    "text-[16px] p-4 h-[60px] font-medium lg:text-[17px] lg:font-light",
+                                                    renderValueBeetwenPath?.({
+                                                        genshin: 'hover:bg-genshin-800 data-[state=open]:bg-genshin-800/60',
+                                                        honkaiSTR: 'hover:bg-honkaiSTR-800 data-[state=open]:bg-honkaiSTR-800/60',
+                                                        zenless: 'hover:bg-zenless-600 data-[state=open]:bg-zenless-600/60',
+                                                        whutering: 'hover:bg-interval-glory-900/50 data-[state=open]:bg-interval-glory-900/60'
+                                                    }))
+                                                }
+                                            >
                                                 {item.title}
                                             </NavigationMenuTrigger>
-                                            <NavigationMenuContent >
+                                            <NavigationMenuContent>
                                                 <ul className="w-full min-w-[200px]">
                                                     {item?.children?.map(children => (
                                                         <li className="flex" key={children.id}>
                                                             <Link
                                                                 href={children.title.toLowerCase()}
-                                                                className="w-full ps-4 py-3"
+                                                                className={cn(
+                                                                    "w-full ps-4 py-3",
+
+                                                                )}
                                                             >
                                                                 {children.title}
                                                             </Link>
