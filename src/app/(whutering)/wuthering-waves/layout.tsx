@@ -4,6 +4,7 @@ import { Footer } from "~/components/ui/Footer";
 import { cn, dataMockApiImages, dataMockApis, roboto } from "~/utils";
 import '~/app/globals.css'
 import { listLinkItemsWhutering } from "~/features/whuteringWaves";
+import { MainLayout } from "~/components/layout";
 
 export const metadata: Metadata = {
   title: "Wuthering Waves | Interval Guide",
@@ -29,11 +30,9 @@ export default function RootLayout({
           variant={'whutering'}
           iconGame={dataMockApis.wuthering.images}
         />
-        <main className="pt-32 container md:px-6 lg:px-10 xl:px-52">
-          <div className=" bg-interval-purple-800 p-5 md:p-6 md:py-10 lg:p-7 rounded-md">
-            {children}
-          </div>
-        </main>
+        <MainLayout>
+          {children}
+        </MainLayout>
         <Footer />
       </body>
     </html>

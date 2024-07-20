@@ -6,6 +6,7 @@ import { dataMockApiImages } from "~/utils/mockApi";
 import { Footer } from "~/components/ui/Footer";
 import { listLinksItemsGenshin, listLinksItemsGenshinMobile } from "~/features/genshin";
 import { Navbar } from "~/components/template";
+import { MainLayout } from "~/components/layout";
 
 
 export const metadata: Metadata = {
@@ -33,11 +34,9 @@ export default function RootLayout({
           variant={'genshin'}
           iconGame={dataMockApiImages.genshin}
         />
-        <main className="pt-32 container md:px-6 lg:px-10 xl:px-52">
-          <div className=" bg-interval-purple-800 p-5 md:p-6 md:py-10 lg:p-7 rounded-md">
-            {children}
-          </div>
-        </main>
+        <MainLayout>
+          {children}
+        </MainLayout>
         <Footer />
       </body>
     </html>

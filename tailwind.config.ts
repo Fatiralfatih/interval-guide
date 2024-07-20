@@ -25,6 +25,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "rarity-5": 'https://rerollcdn.com/STARRAIL/Rarity/5_sm.png'
+      },
       colors: {
         'interval-purple': {
           400: '#4d5fc4',

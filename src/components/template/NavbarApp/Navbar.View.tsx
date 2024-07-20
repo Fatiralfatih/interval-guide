@@ -29,7 +29,11 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                     <div className="flex justify-between w-full items-center">
                         {/* header */}
                         <div className="flex items-center gap-5">
-                            <h1 className="text-xl font-bold md:text-2xl">Interval.GG</h1>
+                            <Link
+                                href={'/'}
+                            >
+                                <h1 className="text-xl font-bold md:text-2xl">Interval.GG</h1>
+                            </Link>
                             <div className="text-sm font-medium flex items-center gap-2">
                                 <figure>
                                     <Image
@@ -162,7 +166,15 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                 {/* navbar for website */}
                 <section className={`hidden lg:flex lg:flex-col`}>
                     <div className="flex gap-5">
-                        <h1 className="text-xl font-bold pt-2 md:text-2xl">Interval.GG</h1>
+                        <Link
+                            href={'/'}
+                        >
+                            <h1
+                                className="text-xl font-bold pt-2 md:text-2xl"
+                            >
+                                Interval.GG
+                            </h1>
+                        </Link>
                         <ul className="bg-speechless flex rounded-b-lg capitalize text-xs min-w-full lg:text-sm">
                             {/* genshin impact */}
                             {listGames.map((item) => (
