@@ -10,35 +10,35 @@ import { MainLayout } from "~/components/layout";
 
 
 export const metadata: Metadata = {
-  title: "Genshin Impact | Interval Guide",
-  description: "guide for genshin impact",
-  icons: {
-    icon: dataMockApiImages.genshin.icon
-  }
+    title: "Genshin Impact | Interval Guide",
+    description: "guide for genshin impact",
+    icons: {
+        icon: dataMockApiImages.genshin.icon
+    }
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
 
-  return (
-    <html lang="en">
-      <body className={cn(`${roboto.className} bg-interval-purple-900 min-h-screen antialiased text-white`)}>
-        <Navbar
-          listLinkItems={{
-            web: listLinksItemsGenshin,
-            mobile: listLinksItemsGenshinMobile,
-          }}
-          variant={'genshin'}
-          iconGame={dataMockApiImages.genshin}
-        />
-        <MainLayout>
-          {children}
-        </MainLayout>
-        <Footer />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={cn(`${roboto.className} bg-interval-purple-900 min-h-screen antialiased text-white`)}>
+                <Navbar
+                    listLinkItems={{
+                        web: listLinksItemsGenshin,
+                        mobile: listLinksItemsGenshinMobile,
+                    }}
+                    variant={'genshin'}
+                    iconGame={dataMockApiImages.genshin}
+                />
+                <MainLayout>
+                    {children}
+                </MainLayout>
+                <Footer />
+            </body>
+        </html>
+    );
 }

@@ -60,7 +60,7 @@ const genshinData: GenshinData[] = [
         id: 1,
         hero: 'clorinde',
         element: genshinElements.electro,
-        link: '/characters/clorinde',
+        link: '/character/clorinde',
         role: 'subDps',
         isNew: true,
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Clorinde.png',
@@ -70,7 +70,7 @@ const genshinData: GenshinData[] = [
         id: 2,
         hero: 'Shetos',
         element: genshinElements.electro,
-        link: '/characters/shetos',
+        link: '/character/shetos',
         role: 'subDps',
         isNew: true,
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sethos.png',
@@ -80,7 +80,7 @@ const genshinData: GenshinData[] = [
         id: 3,
         hero: 'Albedo',
         element: genshinElements.geo,
-        link: '/characters/albedo',
+        link: '/character/albedo',
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Albedo.png',
         rarity: 5
@@ -89,7 +89,7 @@ const genshinData: GenshinData[] = [
         id: 4,
         hero: 'Alhaitam',
         element: genshinElements.dendro,
-        link: '/characters/alhaitam',
+        link: '/character/alhaitam',
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Alhaitham.png',
         rarity: 5
@@ -98,7 +98,7 @@ const genshinData: GenshinData[] = [
         id: 5,
         hero: 'Aloy',
         element: genshinElements.cyro,
-        link: '/characters/aloy',
+        link: '/character/aloy',
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Aloy.png',
         rarity: 5
@@ -106,7 +106,7 @@ const genshinData: GenshinData[] = [
     {
         id: 6,
         hero: 'Arlecchino',
-        link: '/characters/arlecchino',
+        link: '/character/arlecchino',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Arlecchino.png',
@@ -115,7 +115,7 @@ const genshinData: GenshinData[] = [
     {
         id: 7,
         hero: 'ayaka',
-        link: '/characters/ayaka',
+        link: '/character/ayaka',
         element: genshinElements.cyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Ayaka.png',
@@ -124,7 +124,7 @@ const genshinData: GenshinData[] = [
     {
         id: 8,
         hero: 'ayato',
-        link: '/characters/ayato',
+        link: '/character/ayato',
         element: genshinElements.cyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Ayato.png',
@@ -133,7 +133,7 @@ const genshinData: GenshinData[] = [
     {
         id: 9,
         hero: 'baizhu',
-        link: '/characters/baizhu',
+        link: '/character/baizhu',
         element: genshinElements.dendro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Baizhu.png',
@@ -142,7 +142,7 @@ const genshinData: GenshinData[] = [
     {
         id: 10,
         hero: 'childe',
-        link: '/characters/childe',
+        link: '/character/childe',
         element: genshinElements.hydro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Childe.png',
@@ -151,7 +151,7 @@ const genshinData: GenshinData[] = [
     {
         id: 11,
         hero: 'chiori',
-        link: '/characters/chiori',
+        link: '/character/chiori',
         element: genshinElements.geo,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Chiori.png',
@@ -160,7 +160,7 @@ const genshinData: GenshinData[] = [
     {
         id: 12,
         hero: 'cyno',
-        link: '/characters/cyno',
+        link: '/character/cyno',
         element: genshinElements.electro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Cyno.png',
@@ -169,7 +169,7 @@ const genshinData: GenshinData[] = [
     {
         id: 13,
         hero: 'dehya',
-        link: '/characters/dehya',
+        link: '/character/dehya',
         element: genshinElements.pyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Dehya.png',
@@ -178,7 +178,7 @@ const genshinData: GenshinData[] = [
     {
         id: 14,
         hero: 'diluc',
-        link: '/characters/diluc',
+        link: '/character/diluc',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Diluc.png',
@@ -187,7 +187,7 @@ const genshinData: GenshinData[] = [
     {
         id: 15,
         hero: 'eula',
-        link: '/characters/eula',
+        link: '/character/eula',
         element: genshinElements.cyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Eula.png',
@@ -196,7 +196,7 @@ const genshinData: GenshinData[] = [
     {
         id: 16,
         hero: 'furina',
-        link: '/characters/furina',
+        link: '/character/furina',
         element: genshinElements.hydro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Furina.png',
@@ -205,7 +205,7 @@ const genshinData: GenshinData[] = [
     {
         id: 17,
         hero: 'ganyu',
-        link: '/characters/ganyu',
+        link: '/character/ganyu',
         element: genshinElements.cyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Ganyu.png',
@@ -214,7 +214,7 @@ const genshinData: GenshinData[] = [
     {
         id: 18,
         hero: 'hu tao',
-        link: '/characters/hu tao',
+        link: '/character/hu tao',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Hu%20Tao.png',
@@ -223,7 +223,7 @@ const genshinData: GenshinData[] = [
     {
         id: 19,
         hero: 'itto',
-        link: '/characters/itto',
+        link: '/character/itto',
         element: genshinElements.geo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Itto.png',
@@ -232,7 +232,7 @@ const genshinData: GenshinData[] = [
     {
         id: 20,
         hero: 'jean',
-        link: '/characters/jean',
+        link: '/character/jean',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Jean.png',
@@ -241,7 +241,7 @@ const genshinData: GenshinData[] = [
     {
         id: 21,
         hero: 'kazuha',
-        link: '/characters/kazuha',
+        link: '/character/kazuha',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Kazuha.png',
@@ -250,7 +250,7 @@ const genshinData: GenshinData[] = [
     {
         id: 22,
         hero: 'keqing',
-        link: '/characters/keqing',
+        link: '/character/keqing',
         element: genshinElements.electro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Keqing.png',
@@ -259,7 +259,7 @@ const genshinData: GenshinData[] = [
     {
         id: 23,
         hero: 'klee',
-        link: '/characters/klee',
+        link: '/character/klee',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Klee.png',
@@ -268,7 +268,7 @@ const genshinData: GenshinData[] = [
     {
         id: 24,
         hero: 'kokomi',
-        link: '/characters/kokomi',
+        link: '/character/kokomi',
         element: genshinElements.hydro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Kokomi.png',
@@ -277,7 +277,7 @@ const genshinData: GenshinData[] = [
     {
         id: 25,
         hero: 'lyney',
-        link: '/characters/lyney',
+        link: '/character/lyney',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Lyney.png',
@@ -286,7 +286,7 @@ const genshinData: GenshinData[] = [
     {
         id: 26,
         hero: 'mona',
-        link: '/characters/mona',
+        link: '/character/mona',
         element: genshinElements.hydro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Mona.png',
@@ -295,7 +295,7 @@ const genshinData: GenshinData[] = [
     {
         id: 27,
         hero: 'nahida',
-        link: '/characters/nahida',
+        link: '/character/nahida',
         element: genshinElements.dendro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Nahida.png',
@@ -304,7 +304,7 @@ const genshinData: GenshinData[] = [
     {
         id: 28,
         hero: 'navia',
-        link: '/characters/navia',
+        link: '/character/navia',
         element: genshinElements.geo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Navia.png',
@@ -313,7 +313,7 @@ const genshinData: GenshinData[] = [
     {
         id: 29,
         hero: 'neuvillette',
-        link: '/characters/neuvillette',
+        link: '/character/neuvillette',
         element: genshinElements.hydro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Neuvillette.png',
@@ -322,7 +322,7 @@ const genshinData: GenshinData[] = [
     {
         id: 30,
         hero: 'nilou',
-        link: '/characters/nilou',
+        link: '/character/nilou',
         element: genshinElements.hydro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Nilou.png',
@@ -331,7 +331,7 @@ const genshinData: GenshinData[] = [
     {
         id: 31,
         hero: 'qiqi',
-        link: '/characters/qiqi',
+        link: '/character/qiqi',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Qiqi.png',
@@ -340,7 +340,7 @@ const genshinData: GenshinData[] = [
     {
         id: 32,
         hero: 'raiden',
-        link: '/characters/raiden',
+        link: '/character/raiden',
         element: genshinElements.electro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Raiden.png',
@@ -349,7 +349,7 @@ const genshinData: GenshinData[] = [
     {
         id: 33,
         hero: 'shenhe',
-        link: '/characters/shenhe',
+        link: '/character/shenhe',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Shenhe.png',
@@ -358,7 +358,7 @@ const genshinData: GenshinData[] = [
     {
         id: 34,
         hero: 'tighnari',
-        link: '/characters/tighnari',
+        link: '/character/tighnari',
         element: genshinElements.dendro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Tighnari.png',
@@ -367,7 +367,7 @@ const genshinData: GenshinData[] = [
     {
         id: 35,
         hero: 'traveler (anemo)',
-        link: '/characters/traveler(anemo)',
+        link: '/character/traveler(anemo)',
         element: genshinElements.anemo,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Anemo).png',
@@ -376,7 +376,7 @@ const genshinData: GenshinData[] = [
     {
         id: 36,
         hero: 'traveler (dendro)',
-        link: '/characters/traveler(dendro)',
+        link: '/character/traveler(dendro)',
         element: genshinElements.dendro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Dendro).png',
@@ -385,7 +385,7 @@ const genshinData: GenshinData[] = [
     {
         id: 37,
         hero: 'traveler (electro)',
-        link: '/characters/traveler(electro)',
+        link: '/character/traveler(electro)',
         element: genshinElements.electro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Electro).png',
@@ -394,7 +394,7 @@ const genshinData: GenshinData[] = [
     {
         id: 38,
         hero: 'traveler (geo)',
-        link: '/characters/traveler(geo)',
+        link: '/character/traveler(geo)',
         element: genshinElements.geo,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Geo).png',
@@ -403,7 +403,7 @@ const genshinData: GenshinData[] = [
     {
         id: 39,
         hero: 'traveler (hydro)',
-        link: '/characters/traveler(hydro)',
+        link: '/character/traveler(hydro)',
         element: genshinElements.hydro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Hydro).png',
@@ -412,7 +412,7 @@ const genshinData: GenshinData[] = [
     {
         id: 40,
         hero: 'venti',
-        link: '/characters/venti',
+        link: '/character/venti',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Venti.png',
@@ -421,7 +421,7 @@ const genshinData: GenshinData[] = [
     {
         id: 41,
         hero: 'wanderer',
-        link: '/characters/wanderer',
+        link: '/character/wanderer',
         element: genshinElements.anemo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Wanderer.png',
@@ -430,7 +430,7 @@ const genshinData: GenshinData[] = [
     {
         id: 42,
         hero: 'wriothesley',
-        link: '/characters/wriothesley',
+        link: '/character/wriothesley',
         element: genshinElements.anemo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Wriothesley.png',
@@ -439,7 +439,7 @@ const genshinData: GenshinData[] = [
     {
         id: 43,
         hero: 'xianyun',
-        link: '/characters/xianyun',
+        link: '/character/xianyun',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xianyun.png',
@@ -448,7 +448,7 @@ const genshinData: GenshinData[] = [
     {
         id: 44,
         hero: 'xiao',
-        link: '/characters/xiao',
+        link: '/character/xiao',
         element: genshinElements.anemo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xiao.png',
@@ -457,7 +457,7 @@ const genshinData: GenshinData[] = [
     {
         id: 45,
         hero: 'yae miko',
-        link: '/characters/yae-miko',
+        link: '/character/yae-miko',
         element: genshinElements.electro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yae%20Miko.png',
@@ -466,7 +466,7 @@ const genshinData: GenshinData[] = [
     {
         id: 46,
         hero: 'yelan',
-        link: '/characters/yelan',
+        link: '/character/yelan',
         element: genshinElements.hydro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yelan.png',
@@ -475,7 +475,7 @@ const genshinData: GenshinData[] = [
     {
         id: 47,
         hero: 'yoimiya',
-        link: '/characters/yoimiya',
+        link: '/character/yoimiya',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yoimiya.png',
@@ -484,7 +484,7 @@ const genshinData: GenshinData[] = [
     {
         id: 48,
         hero: 'zhongli',
-        link: '/characters/zhongli',
+        link: '/character/zhongli',
         element: genshinElements.geo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Zhongli.png',
@@ -493,7 +493,7 @@ const genshinData: GenshinData[] = [
     {
         id: 49,
         hero: 'amber',
-        link: '/characters/amber',
+        link: '/character/amber',
         element: genshinElements.pyro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Amber.png',
@@ -502,7 +502,7 @@ const genshinData: GenshinData[] = [
     {
         id: 50,
         hero: 'barbara',
-        link: '/characters/barbara',
+        link: '/character/barbara',
         element: genshinElements.hydro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Barbara.png',
@@ -511,7 +511,7 @@ const genshinData: GenshinData[] = [
     {
         id: 51,
         hero: 'beidou',
-        link: '/characters/beidou',
+        link: '/character/beidou',
         element: genshinElements.electro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Beidou.png',
@@ -520,7 +520,7 @@ const genshinData: GenshinData[] = [
     {
         id: 52,
         hero: 'bennett',
-        link: '/characters/bennett',
+        link: '/character/bennett',
         element: genshinElements.pyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Bennett.png',
@@ -529,7 +529,7 @@ const genshinData: GenshinData[] = [
     {
         id: 53,
         hero: 'candace',
-        link: '/characters/candace',
+        link: '/character/candace',
         element: genshinElements.hydro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Candace.png',
@@ -538,7 +538,7 @@ const genshinData: GenshinData[] = [
     {
         id: 54,
         hero: 'charlotte',
-        link: '/characters/charlotte',
+        link: '/character/charlotte',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Charlotte.png',
@@ -547,7 +547,7 @@ const genshinData: GenshinData[] = [
     {
         id: 55,
         hero: 'chevreuse',
-        link: '/characters/chevreuse',
+        link: '/character/chevreuse',
         element: genshinElements.pyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Chevreuse.png',
@@ -556,7 +556,7 @@ const genshinData: GenshinData[] = [
     {
         id: 56,
         hero: 'chongyun',
-        link: '/characters/chongyun',
+        link: '/character/chongyun',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Chongyun.png',
@@ -565,7 +565,7 @@ const genshinData: GenshinData[] = [
     {
         id: 57,
         hero: 'collei',
-        link: '/characters/collei',
+        link: '/character/collei',
         element: genshinElements.dendro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Collei.png',
@@ -574,7 +574,7 @@ const genshinData: GenshinData[] = [
     {
         id: 58,
         hero: 'diona',
-        link: '/characters/diona',
+        link: '/character/diona',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Diona.png',
@@ -583,7 +583,7 @@ const genshinData: GenshinData[] = [
     {
         id: 59,
         hero: 'dori',
-        link: '/characters/dori',
+        link: '/character/dori',
         element: genshinElements.electro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Dori.png',
@@ -592,7 +592,7 @@ const genshinData: GenshinData[] = [
     {
         id: 60,
         hero: 'faruzan',
-        link: '/characters/faruzan',
+        link: '/character/faruzan',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Faruzan.png',
@@ -601,7 +601,7 @@ const genshinData: GenshinData[] = [
     {
         id: 61,
         hero: 'fischl',
-        link: '/characters/fischl',
+        link: '/character/fischl',
         element: genshinElements.electro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Fischl.png',
@@ -610,7 +610,7 @@ const genshinData: GenshinData[] = [
     {
         id: 62,
         hero: 'freminet',
-        link: '/characters/freminet',
+        link: '/character/freminet',
         element: genshinElements.cyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Freminet.png',
@@ -619,7 +619,7 @@ const genshinData: GenshinData[] = [
     {
         id: 63,
         hero: 'gaming',
-        link: '/characters/gaming',
+        link: '/character/gaming',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Gaming.png',
@@ -628,7 +628,7 @@ const genshinData: GenshinData[] = [
     {
         id: 64,
         hero: 'gorou',
-        link: '/characters/gorou',
+        link: '/character/gorou',
         element: genshinElements.geo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Gorou.png',
@@ -637,7 +637,7 @@ const genshinData: GenshinData[] = [
     {
         id: 65,
         hero: 'heizou',
-        link: '/characters/heizou',
+        link: '/character/heizou',
         element: genshinElements.anemo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Heizou.png',
@@ -646,7 +646,7 @@ const genshinData: GenshinData[] = [
     {
         id: 66,
         hero: 'kaeya',
-        link: '/characters/kaeya',
+        link: '/character/kaeya',
         element: genshinElements.cyro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Kaeya.png',
@@ -655,7 +655,7 @@ const genshinData: GenshinData[] = [
     {
         id: 67,
         hero: 'kaveh',
-        link: '/characters/kaveh',
+        link: '/character/kaveh',
         element: genshinElements.dendro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Kaveh.png',
@@ -664,7 +664,7 @@ const genshinData: GenshinData[] = [
     {
         id: 68,
         hero: 'kirara',
-        link: '/characters/kirara',
+        link: '/character/kirara',
         element: genshinElements.dendro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Kirara.png',
@@ -673,7 +673,7 @@ const genshinData: GenshinData[] = [
     {
         id: 69,
         hero: 'kuki shinobu',
-        link: '/characters/kuki-shinobu',
+        link: '/character/kuki-shinobu',
         element: genshinElements.electro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Kuki%20Shinobu.png',
@@ -682,7 +682,7 @@ const genshinData: GenshinData[] = [
     {
         id: 70,
         hero: 'layla',
-        link: '/characters/layla',
+        link: '/character/layla',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Layla.png',
@@ -691,7 +691,7 @@ const genshinData: GenshinData[] = [
     {
         id: 71,
         hero: 'lisa',
-        link: '/characters/lisa',
+        link: '/character/lisa',
         element: genshinElements.electro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Lisa.png',
@@ -700,7 +700,7 @@ const genshinData: GenshinData[] = [
     {
         id: 72,
         hero: 'lynette',
-        link: '/characters/lynette',
+        link: '/character/lynette',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Lynette.png',
@@ -709,7 +709,7 @@ const genshinData: GenshinData[] = [
     {
         id: 73,
         hero: 'mika',
-        link: '/characters/mika',
+        link: '/character/mika',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Mika.png',
@@ -718,7 +718,7 @@ const genshinData: GenshinData[] = [
     {
         id: 74,
         hero: 'ningguang',
-        link: '/characters/ningguang',
+        link: '/character/ningguang',
         element: genshinElements.geo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Ningguang.png',
@@ -727,7 +727,7 @@ const genshinData: GenshinData[] = [
     {
         id: 75,
         hero: 'noelle',
-        link: '/characters/noelle',
+        link: '/character/noelle',
         element: genshinElements.geo,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Noelle.png',
@@ -736,7 +736,7 @@ const genshinData: GenshinData[] = [
     {
         id: 76,
         hero: 'razor',
-        link: '/characters/razor',
+        link: '/character/razor',
         element: genshinElements.electro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Razor.png',
@@ -745,7 +745,7 @@ const genshinData: GenshinData[] = [
     {
         id: 77,
         hero: 'rosaria',
-        link: '/characters/rosaria',
+        link: '/character/rosaria',
         element: genshinElements.cyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Rosaria.png',
@@ -754,7 +754,7 @@ const genshinData: GenshinData[] = [
     {
         id: 78,
         hero: 'sara',
-        link: '/characters/sara',
+        link: '/character/sara',
         element: genshinElements.electro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sara.png',
@@ -763,7 +763,7 @@ const genshinData: GenshinData[] = [
     {
         id: 79,
         hero: 'sayu',
-        link: '/characters/sayu',
+        link: '/character/sayu',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sayu.png',
@@ -772,7 +772,7 @@ const genshinData: GenshinData[] = [
     {
         id: 80,
         hero: 'sucrose',
-        link: '/characters/sucrose',
+        link: '/character/sucrose',
         element: genshinElements.anemo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Sucrose.png',
@@ -781,7 +781,7 @@ const genshinData: GenshinData[] = [
     {
         id: 81,
         hero: 'thoma',
-        link: '/characters/thoma',
+        link: '/character/thoma',
         element: genshinElements.pyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Thoma.png',
@@ -790,7 +790,7 @@ const genshinData: GenshinData[] = [
     {
         id: 82,
         hero: 'xiangling',
-        link: '/characters/xiangling',
+        link: '/character/xiangling',
         element: genshinElements.pyro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xiangling.png',
@@ -799,7 +799,7 @@ const genshinData: GenshinData[] = [
     {
         id: 83,
         hero: 'xingqiu',
-        link: '/characters/xingqiu',
+        link: '/character/xingqiu',
         element: genshinElements.hydro,
         role: 'subDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xingqiu.png',
@@ -808,7 +808,7 @@ const genshinData: GenshinData[] = [
     {
         id: 84,
         hero: 'xinyan',
-        link: '/characters/xinyan',
+        link: '/character/xinyan',
         element: genshinElements.pyro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Xinyan.png',
@@ -817,7 +817,7 @@ const genshinData: GenshinData[] = [
     {
         id: 85,
         hero: 'yanfei',
-        link: '/characters/yanfei',
+        link: '/character/yanfei',
         element: genshinElements.pyro,
         role: 'mainDps',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yanfei.png',
@@ -826,7 +826,7 @@ const genshinData: GenshinData[] = [
     {
         id: 86,
         hero: 'yaoyao',
-        link: '/characters/yaoyao',
+        link: '/character/yaoyao',
         element: genshinElements.dendro,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yaoyao.png',
@@ -835,7 +835,7 @@ const genshinData: GenshinData[] = [
     {
         id: 87,
         hero: 'yun jin',
-        link: '/characters/yun-jin',
+        link: '/character/yun-jin',
         element: genshinElements.geo,
         role: 'support',
         thumbnail: 'https://rerollcdn.com/GENSHIN/Characters/1/Yun%20Jin.png',

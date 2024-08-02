@@ -1,6 +1,7 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "~/components/ui"
-import { genshinData } from "~/features/genshin"
+import { genshinData, genshinElements } from "~/features/genshin"
 import { cn } from "~/utils"
 
 interface PageCharactersGenshin {
@@ -9,9 +10,18 @@ interface PageCharactersGenshin {
   }
 }
 
+export const generateMetadata = ({ params }: PageCharactersGenshin): Metadata => {
+
+  return {
+    title: `Genshin Impact | ${params.slug.charAt(0).toUpperCase() + params.slug.slice(1)}`,
+    creator: 'Fatir BAHAYA',
+  }
+
+}
+
 const Page = ({ params }: PageCharactersGenshin) => {
 
-  const data = genshinData.find(item => item.hero === params.slug)
+  const getDataBySlug = genshinData.find(item => item.hero === params.slug)
 
   return (
     <div className="bg-interval-purple-700 rounded-md px-4 pb-4 lg:px-5">
@@ -20,8 +30,8 @@ const Page = ({ params }: PageCharactersGenshin) => {
         {/* thumbnail element */}
         <figure className="absolute top-3 right-0">
           <Image
-            src={'https://rerollcdn.com/GENSHIN/UI/element_pyro.png'}
-            alt={`thumbnail-${data?.hero}`}
+            src={genshinElements.pyro.thumbnail}
+            alt={`thumbnail}`}
             width={60}
             height={60}
             className={cn(
@@ -36,10 +46,11 @@ const Page = ({ params }: PageCharactersGenshin) => {
               src={'https://rerollcdn.com/GENSHIN/Characters/1/Arlecchino.png'}
               className={cn(
                 "rounded-lg aspect-auto rarity-5 w-[100px] h-[100px] md:w-[100px] md:h-[100px] lg:h-[110px] lg:w-[110px]",
-                data?.rarity === 4 && 'rarity-4',
-                data?.rarity === 5 && 'rarity-5',
+                // data?.rarity === 4 && 'rarity-4',
+                // data?.rarity === 5 && 'rarity-5',
               )}
-              alt={`thumbnail-${data?.hero}`}
+              // alt={`thumbnail-${data?.hero}`}
+              alt={`thumbnail-}`}
               width={120}
               height={120}
             />
@@ -852,7 +863,7 @@ const Page = ({ params }: PageCharactersGenshin) => {
                   <TooltipTrigger asChild>
                     <div className="flex gap-3 items-center rounded-md md:justify-start">
                       <p className="text-sm py-[3px] px-[9px] bg-interval-purple-400 rounded-md">
-                        4
+                        5
                       </p>
                       <div className="relative w-[48px]">
                         <Image

@@ -3,22 +3,22 @@ import { CharacterList, HeaderApp } from "~/components/template";
 
 const HomePage = () => {
 
-  return (
-    <>
-      {/* header app */}
-      <HeaderApp
-        listElements={listElementsGenshin}
-        listStars={listStarsGenshin}
-        listWeapons={listWeaponsGenshin}
-        titleHeader="Genshin Impact"
-      />
+    return (
+        <>
+            {/* header app */}
+            <HeaderApp
+                listElements={listElementsGenshin}
+                listStars={listStarsGenshin}
+                listWeapons={listWeaponsGenshin}
+                titleHeader="Genshin Impact"
+            />
 
-      {/* characters list */}
-      <CharacterList
-        data={genshinData}
-      />
-    </>
-  );
+            {/* characters list */}
+            <CharacterList
+                data={genshinData}
+            />
+        </>
+    );
 }
 
 export default HomePage
