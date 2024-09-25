@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Badge, Card, CardContent } from "~/components/ui"
 import { cn } from "~/utils"
-import { CharacterListProps } from "./CharacterList"
+import { CharacterListProps } from "./character-list"
 
 const View = ({ data }: CharacterListProps) => {
 

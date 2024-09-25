@@ -2,7 +2,7 @@ import Image from "next/image"
 import { LuSearch } from "react-icons/lu"
 import { Button, Input, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "~/components/ui"
 import { cn } from "~/utils"
-import type { HeaderAppProps } from "./HeaderApp"
+import type { HeaderAppProps } from "./header-app"
 
 const View = ({
     titleHeader,

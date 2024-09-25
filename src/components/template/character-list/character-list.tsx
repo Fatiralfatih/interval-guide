@@ -1,4 +1,4 @@
-import { View } from './CharacterList.View'
+import { View } from './character-list.view'
 
 export interface CharacterListProps {
     data: any[]

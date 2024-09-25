@@ -4,7 +4,7 @@ import { IoClose, IoMenu } from "react-icons/io5"
 import Link from "next/link"
 import { Fragment } from "react"
 import { Button, Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui"
-import { NavbarProps, navbarVariants } from "./Navbar"
+import { NavbarProps, navbarVariants } from "./navbar"
 import { usePathname } from "next/navigation"
 
 const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant, iconGame }: NavbarProps) => {
@@ -76,7 +76,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                                 </div>
                                 <div className="overflow-auto w-full h-screen  pb-8">
                                     <DrawerHeader className="pt-0 pb-0">
-                                        {listLinkItems.mobile.map(item => (
+                                        {listLinkItems?.mobile?.map(item => (
                                             <Link href={'#'} key={item.id}>
                                                 <DrawerTitle className="border-b-[0.1px] border-b-interval-purple-500 hover:bg-interval-purple-900 transition-all ease-in-out duration-200 py-3 text-sm md:text-lg rounded-sm">{item.title}</DrawerTitle>
                                             </Link>
@@ -219,7 +219,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                         {/* menu not children */}
                         <NavigationMenu>
                             <NavigationMenuList className={`text-[16px] space-x-0`}>
-                                {listLinkItems.web.filter(item => !item.children).map(item => (
+                                {listLinkItems?.web?.filter(item => !item.children).map(item => (
                                     (
                                         <Fragment key={item.id}>
                                             <Link
@@ -252,7 +252,7 @@ const NavbarView = ({ renderValueBeetwenPath, listLinkItems, className, variant,
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
-                                    {listLinkItems.web.filter(item => item.children).map(item => (
+                                    {listLinkItems?.web?.filter(item => item.children).map(item => (
                                         <Fragment key={item.id}>
                                             <NavigationMenuTrigger
                                                 className={cn(

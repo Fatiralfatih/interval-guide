@@ -1,5 +1,5 @@
 import { TypePost } from "~/utils";
-import { View } from "./HeaderApp.View"
+import { View } from "./header-app.view"
 
 export interface HeaderAppProps {
     titleHeader: string;

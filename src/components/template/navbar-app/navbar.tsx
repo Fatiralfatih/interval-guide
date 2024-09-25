@@ -1,9 +1,9 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import NavbarView from "./Navbar.View"
 import { IconPost, ListLinkType } from "~/utils"
 import { cva, VariantProps } from "class-variance-authority"
+import NavbarView from "./navbar.view"
 
 export interface NavbarProps extends VariantProps<typeof navbarVariants> {
   className?: string
@@ -13,9 +13,9 @@ export interface NavbarProps extends VariantProps<typeof navbarVariants> {
     honkaiSTR: string,
     zenless: string,
   }) => string | undefined,
-  listLinkItems: {
-    web: ListLinkType[],
-    mobile: ListLinkType[]
+  listLinkItems?: {
+    web?: ListLinkType[],
+    mobile?: ListLinkType[]
   }
   iconGame: IconPost
 }

@@ -1,5 +1,15 @@
-import { genshinData, listElementsGenshin, listStarsGenshin, listWeaponsGenshin } from "~/features/genshin/utils";
-import { CharacterList, HeaderApp } from "~/components/template";
+import { genshinData, listElementsGenshin, listLinksItemsGenshin, listLinksItemsGenshinMobile, listStarsGenshin, listWeaponsGenshin } from "~/features/genshin/utils";
+import { CharacterList, HeaderApp, Navbar } from "~/components/template";
+import { Metadata } from "next";
+import { dataMockApiImages } from "~/utils";
+
+export const metadata: Metadata = {
+  title: "Genshin Impact | Interval Guide",
+  description: "guide for genshin impact",
+  icons: {
+    icon: dataMockApiImages.genshin.icon
+  }
+};
 
 const HomePage = () => {
 
